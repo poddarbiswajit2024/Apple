@@ -1,0 +1,348 @@
+﻿.tdtitle{
+	background-color:#ffffff;
+	height:30px;
+	font:bold 12pt arial;
+	color:#666666;
+	text-align:left;
+	vertical-align:middle;
+	padding-left:3px;
+	border-bottom:solid 0px #ffffff;border-left:0px;border-right:0px;border-top:0px;
+ 
+}
+.tdSubtitle{
+	background-color:#f7f7f7;
+	height:auto;
+	font:bold 10pt arial;
+	color:#000000;
+	text-align:left;
+	vertical-align:middle;
+	padding-left:3px;padding-top:0px;padding-bottom:6px;
+
+}
+.tdStyle
+{
+    text-align:left;
+    vertical-align:middle;  
+    padding-left:10px;
+	line-height:2.3;
+	color:#444444;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 9pt;
+	font-family: arial;
+	
+}
+.tdStyle2
+{
+    text-align:left;
+    vertical-align:bottom;  
+    padding-left:8px;	
+	color:#444444;
+	font: normal normal normal 9pt arial;
+	
+}
+.controlStyle
+{
+vertical-align: bottom;
+}
+
+.backbtn{ text-align:right; padding-right:4px; padding-top:2px}
+
+.mainTable
+{
+    width:97%; /*95*/
+    
+}
+.mainTD
+{ 
+	padding-bottom:20px; padding-left:10px; padding-right:10px; padding-top:20px; 
+	background-color:#f7f7f7;border:solid 1px #dddddd;font:normal 9pt arial;color:#666666;
+	
+}
+.mainTD2
+{ 
+	padding-bottom:10px; padding-left:20px; padding-right:20px; padding-top:10px; 
+	background-color:#f7f7f7;border:solid 1px #dddddd;font:normal 9pt arial;color:#666666;
+	
+}
+.tableStyle
+{
+    width:100%;
+    background-color:white; 
+    border:solid 1px #f1f1f1;
+	
+}
+
+.WaterMarkedTextBox
+{
+	color:RED;
+	display: inline;
+	visibility: visible;
+}
+.NormalTextBox
+{
+	border-right:solid 1px #ccccff;
+	border-top: solid 1px #ccccff;
+	border-left: solid 1px #ccccff;	
+	border-bottom: solid 1px #ccccff;
+	color: black;
+	display: inline;
+	background: #ffffff;
+	visibility: visible;
+}
+
+.TextBoxBorder{ border:solid 1px #acadb2; margin-bottom: 4px; margin-top:4px;
+}
+
+.EntryBoxBorder{ border:solid 1px #acadb2; 
+	margin-bottom: 4px; margin-top:4px;
+}
+
+.ValidatorText
+{
+	color: Blue;	
+}
+
+.btn {
+	color: #000000; 
+	cursor: hand; 
+	border: solid 1px #808080; 
+	font-size: 9pt;
+	background: url("js/calendar/button_back.gif") center; 
+	padding:1px;
+}
+
+.tdgap 
+{
+    height: 15px;
+   
+}
+
+.tdView
+{	
+    font:9pt arial;
+    font-weight:normal;
+    text-align:left;
+    vertical-align:top;
+    padding-left:10px; 
+    padding-right:10px  
+}
+
+ .gridHeader{ background:#f1a80e; background-repeat:repeat-x; 
+              background-position:left top; height:30px; padding-left:5px; font:bold 9pt arial;
+			  color:#ffffff; border-top: solid 0px #e49e09;
+             
+        }   
+.gridStyle
+{
+	 background-color:#ffffff; font: 9pt arial;color:#666666; border:solid 0px #fbeed2;
+}
+.gridRowStyle
+{
+	 border-top:solid 4px #f7f7f7;border-bottom:solid 4px #f7f7f7; height:65px;
+}
+	
+.gridAltRow
+{
+	border-top:solid 0px #e5e5e5;border-bottom:solid 0px #e5e5e5; background-color:#ffffff;height:65px;
+}
+
+.timeDateRow
+{
+	font-family: Arial;
+	font-size: 8pt;
+	color: Silver;
+	 border-bottom:solid 2px #f7f7f7;
+	  padding-bottom: 4px; padding-top: 3px;
+	
+}
+.clientdetails
+{
+	
+	font-size: 9pt;	
+	 
+	
+}
+.fadedtext
+{
+	font-family: Arial;
+	font-size: 9pt;
+	color: Silver;	 
+	
+}
+
+.itemRowStyle
+{
+	 padding-bottom: 3px; padding-top: 7px;
+	
+}
+
+.gridPagerStyle
+{
+	padding:5px; text-align: left;
+}
+
+.gridPagerStyle td
+{
+	padding-left: 4px;padding-right: 4px;
+}
+
+.gridPagerStyletd
+{
+	font: 10pt arial ; color:#000000; text-align: left; padding-left: 4px;padding-right: 4px;	
+}
+
+.gridPagerStyletd td
+{
+	 padding-left: 4px;padding-right: 4px;	
+}
+
+.gridLeftPad
+{
+	padding-left:10px;
+}
+.gridRightPad
+{
+	padding-right:10px;
+}
+
+.tdContent{ height:450px}
+
+.lblRequest{ color:#6ea500; font:bold 9pt arial;}
+
+.lblSuccess{ color:#6ea500; font:bold 9pt arial;}
+
+
+/*AutoComplete flyout
+background-color : inherit;
+height : 200px;
+cursor : 'default';
+overflow : auto;
+
+ */
+
+.auto_completionListElement 
+{  
+	margin : 0px;
+	background-color : white;
+	color : windowtext;
+	border : buttonshadow;
+	border-width : 1px;
+	border-style : solid;
+	cursor : 'pointer';
+	overflow : auto;
+	height : auto;
+    text-align : left; 
+    list-style-type : none;
+    font-size: 9pt;
+	font-family: arial;
+	padding-left: 0px;
+	
+}
+
+
+/* AutoComplete highlighted item 
+
+*/
+
+.auto_highlightedListItem
+{
+	background-color: #6ea500;
+	color: White;
+	padding: 1px;
+	font-size: 9pt;
+	font-family: arial;
+	line-height: 1.5;
+}
+
+/* AutoComplete item 
+background-color : window;
+	color : windowtext;
+	*each item in the flyout list
+*/
+
+.auto_listItem 
+{
+    background-color : White;
+	color : Black;	
+	color : windowtext;
+	padding : 1px;
+	line-height: 1.5;
+	font-size: 9pt;
+	font-family: arial;
+}
+
+ .tdHeader 
+ {
+ 	background:#f1a80e; 
+    height:29px; 
+    padding:3px 10px 4px 10px; 
+    font:bold 10pt arial;
+	color:#ffffff; 
+	width:95%;
+	text-align: left; 
+	vertical-align:middle;		
+	margin-bottom:5px;
+	}
+
+.msgicon
+{
+ width:auto; height:auto;z-index:10;position:relative;left:0; top:0;
+}
+.msgnumber
+{
+ width:auto; height:auto; font:bold 9pt arial; color:#FF0000;position:relative; left:0; bottom:20;z-index:200;
+}
+
+.divheader{ 
+              
+              font-family: Arial; font-weight: bold; font-size: 9pt;
+			  color:#f1a80e; border-top: solid 0px #e49e09;
+			  text-align: left; 
+			
+			  }
+			  
+
+
+/* calender css*/
+.ajax__calendar_container {padding:4px;cursor:default;width:170px;font-size:11px;text-align:center;font-family:Arial;}
+.ajax__calendar_body {height:139px;width:170px;position:relative;overflow:hidden;margin:auto;}
+.ajax__calendar_days, .ajax__calendar_months, .ajax__calendar_years {top:0px;left:0px;height:139px;width:170px;position:absolute;text-align:center;margin:auto;}
+.ajax__calendar_container TABLE {padding:0px;margin:0px;font-size:11px;}
+.ajax__calendar_container TD {padding:0px;margin:0px;font-size:11px;}
+.ajax__calendar_header {height:20px;width:100%;}
+
+.ajax__calendar_prev {cursor:pointer;width:15px;height:15px;float:left;background-repeat:no-repeat;background-position:50% 50%;background-image:url(../Images/Buttons/arrow-left.gif);}
+.ajax__calendar_next {cursor:pointer;width:15px;height:15px;float:right;background-repeat:no-repeat;background-position:50% 50%;background-image:url(../Images/Buttons/arrow-right.gif);}
+
+.ajax__calendar_title {cursor:pointer;font-weight:bold; margin-left:15px; margin-right:15px;}
+.ajax__calendar_footer {height:15px;}
+.ajax__calendar_today {cursor:pointer;padding-top:3px;}
+.ajax__calendar_dayname {height:17px;width:17px;text-align:right;padding:0 2px;}
+.ajax__calendar_day {height:17px;width:18px;text-align:right;padding:0 2px;cursor:pointer;}
+.ajax__calendar_month {height:44px;width:40px;text-align:center;cursor:pointer;overflow:hidden;}
+.ajax__calendar_year {height:44px;width:40px;text-align:center;cursor:pointer;overflow:hidden;}
+
+.ajax__calendar .ajax__calendar_container {border:1px solid #646464;background-color:#ffffff;color:#000000;}
+.ajax__calendar .ajax__calendar_footer {border-top:1px solid #f5f5f5;}
+.ajax__calendar .ajax__calendar_dayname {border-bottom:1px solid #f5f5f5;}
+.ajax__calendar .ajax__calendar_day {border:1px solid #ffffff;}
+.ajax__calendar .ajax__calendar_month {border:1px solid #ffffff;}
+.ajax__calendar .ajax__calendar_year {border:1px solid #ffffff;}
+
+.ajax__calendar .ajax__calendar_active .ajax__calendar_day {background-color:#edf9ff;border-color:#0066cc;color:#0066cc;}
+.ajax__calendar .ajax__calendar_active .ajax__calendar_month {background-color:#edf9ff;border-color:#0066cc;color:#0066cc;}
+.ajax__calendar .ajax__calendar_active .ajax__calendar_year {background-color:#edf9ff;border-color:#0066cc;color:#0066cc;}
+
+.ajax__calendar .ajax__calendar_other .ajax__calendar_day {background-color:#ffffff;border-color:#ffffff;color:#646464;}
+.ajax__calendar .ajax__calendar_other .ajax__calendar_year {background-color:#ffffff;border-color:#ffffff;color:#646464;}
+
+.ajax__calendar .ajax__calendar_hover .ajax__calendar_day {background-color:#edf9ff;border-color:#daf2fc;color:#0066cc;}
+.ajax__calendar .ajax__calendar_hover .ajax__calendar_month {background-color:#edf9ff;border-color:#daf2fc;color:#0066cc;}
+.ajax__calendar .ajax__calendar_hover .ajax__calendar_year {background-color:#edf9ff;border-color:#daf2fc;color:#0066cc;}
+
+.ajax__calendar .ajax__calendar_hover .ajax__calendar_title {color:#0066cc;}
+.ajax__calendar .ajax__calendar_hover .ajax__calendar_today {color:#0066cc;}
+
+/* calender css*/

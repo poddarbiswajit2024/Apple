@@ -1,0 +1,6 @@
+inetbilldimapur
+
+billplans table added column id,  identity for sorting purpose
+and column createdon for log purpose
+
+created inetbilltesting from inetbillkohima for testing purpose using export db method. stored proc and identity ids added seperately wherever needed.

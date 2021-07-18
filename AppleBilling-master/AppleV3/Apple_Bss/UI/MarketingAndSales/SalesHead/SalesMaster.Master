@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SalesMaster.master.cs" Inherits="Apple_Bss.UI.MarketingAndSales.SalesHead.SalesMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="text/javascript">
+         // alert(window.innerWidth);
+         //if (window.innerWidth > 768) {
+         //    document.location = "Default.aspx";
+         //}
+
+
+    </script>
+	<title>Apple</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="../../../Stylesheet2020/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="../../../Stylesheet2020/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="../../../Stylesheet2020/css/core.css" rel="stylesheet" type="text/css">
+	<link href="../../../Stylesheet2020/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../../../Stylesheet2020/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="../../../Stylesheet2020/js/plugins/loaders/pace.min.js"></script>
+	<%--<script type="text/javascript" src="../../../Stylesheet2020/js/core/libraries/jquery.min.js"></script>--%>
+    <script src="../../../Stylesheet2020/js/core/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../Stylesheet2020/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../Stylesheet2020/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	
+	<script type="text/javascript" src="../../../Stylesheet2020/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script type="text/javascript" src="../../../Stylesheet2020/js/core/app.js"></script>
+	<%--<script type="text/javascript" src="../../../Stylesheet2020/js/pages/dashboard.js"></script>--%>
+
+	<script type="text/javascript" src="../../../Stylesheet2020/js/plugins/ui/ripple.min.js"></script>
+
+
+	<script type="text/javascript" src="../../../Stylesheet2020/js/core/libraries/jquery_ui/interactions.min.js"></script>
+
+	<script type="text/javascript" src="../../../Stylesheet2020/js/plugins/forms/selects/select2.min.js"></script>
+
+	<script type="text/javascript" src="../../../Stylesheet2020/js/pages/form_select2.js"></script>
+
+		<script type="text/javascript" src="../../../Stylesheet2020/ThemeJS/footable.min.js"></script>
+	<script type="text/javascript" src="../../../Stylesheet2020/ThemeJS/form_bootstrap_select.js"></script>
+	<script type="text/javascript" src="../../../Stylesheet2020/ThemeJS/bootstrap_select.min.js"></script>
+
+	<script type="text/javascript" src="../../../Stylesheet2020/ThemeJS/moment.min.js"></script>	
+
+	<script type="text/javascript" language="javascript">
+function PopupCenter(pageURL,title, w,h) 
+{
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+var targetWin = window.open(pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=1, resizable=no, copyhistory=no, width=' + w + ',height='+h+ ', top=' +top+ ',left=' +left);
+}
+</script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>   
+    <form id="form1" runat="server">
+		 <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+        <div>
+			<div class="navbar navbar-inverse bg-indigo">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/logo2016.jpg" alt=""></a>
+
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			<ul class="nav navbar-nav">
+				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+
+			<div class="navbar-right">
+				
+				<p class="navbar-text"><span class="label bg-success-400">Online</span></p>
+				
+				<ul class="nav navbar-nav">				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-gear position-left"></i>
+							Settings
+							<span class="caret"></span>
+						</a>
+	
+						<ul class="dropdown-menu dropdown-menu-right">
+							
+							<li><a href="javascript:PopupCenter('../ChangePassword.aspx','cp', 700,400);"><i class="icon-accessibility"></i> Change Password</a></li>
+							<li class="divider"></li>
+							
+							<li><asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+                            CausesValidation="False" ><i class="icon-gear"></i>Logout</asp:LinkButton></li>
+						</ul>
+					</li>
+			
+				</ul>
+			</div>
+		</div>
+	</div>
+			<%--<div class="page-container">--%>
+			<div class="page-content">
+
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main sidebar-default">
+				<div class="sidebar-content">
+
+				
+
+					<!-- Main navigation New -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
+
+								<!-- Main -->
+								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+								<li><a href="DefaultPaperless.aspx"><i class="icon-home4"></i> <span>Home</span></a></li>
+								<li><a href="UserRegisterPaperless.aspx"><i class="icon-pencil7"></i> <span>Register Applicant</span></a></li>
+                                <li><a href="ManageRegistrationsPaperless.aspx"><i class="icon-design"></i> <span>Manage Registrations</span></a></li>
+                                <li><a href="ManagerejectedPaperless.aspx"><i class="icon-camera"></i> <span>Rejected Registrations</span></a></li>
+                                <li><a href="Default.aspx"><i class="icon-magazine"></i> <span>Paper Registration</span></a></li>
+				
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+           
+
+				</div>
+			</div>
+			<!-- /main sidebar -->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				
+            </asp:ContentPlaceHolder>
+        </div>
+				</div>
+			<%--</div>--%>
+    </form>
+</body>
+</html>

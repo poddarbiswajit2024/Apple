@@ -1,0 +1,65 @@
+#main{
+	/* The main container */
+	margin:0;
+	text-align:center;
+	width:100%;
+	position:relative;
+	padding:0;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+ul.container{
+	/* The topmost UL */
+	width:100%;
+
+}
+
+li{
+	list-style:none;
+	text-align:left;
+}
+
+li.menu{
+	/* The main list elements */
+	width:100%;
+	padding:5px 0;
+}
+
+li.button a{
+	/* The section titles */
+	background:#f1a80e; 
+	display:block;
+	font:bold 10pt arial;	
+	color:#fff;			
+	overflow:hidden;
+	padding:0px 10px 4px 10px; 
+	position:relative;
+	width:95%;
+	text-decoration:none;
+	height:auto;
+	padding-top:0;
+	margin-top:0;
+	
+}
+
+.dropdown{
+	/* The expandable lists */
+	display:none;
+	padding:2px 2px 2px 2px;
+	width:100%;
+	padding-top:0;
+	margin-top:0;
+}
+.dropdown li{
+	/* Each element in the expandable list */
+		
+}
+.clear{
+	clear:both;
+}
+
+

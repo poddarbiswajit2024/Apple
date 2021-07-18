@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+
+  <siteMapNode>
+    <siteMapNode title="Billing Home" url="UI/BillingAndCustomerCare/Billing/Default.aspx">
+
+      <siteMapNode title="Broadband Subscriber :: Raise Bill" url="UI/BillingAndCustomerCare/Billing/BillToBeRaised.aspx" />
+      <siteMapNode title="Broadband Subscriber :: Subscriber Ledger" url="UI/BillingAndCustomerCare/Billing/BroadBandSubscriberLedgerView.aspx" />
+
+      <siteMapNode title="Arrears and Waivers :: Post Arrear" url="UI/BillingAndCustomerCare/Billing/PostArrears.aspx" />
+      <siteMapNode title="Payment Connection :: Post Waiver" url="UI/BillingAndCustomerCare/Billing/PostWaivers.aspx" />
+
+
+    </siteMapNode>
+
+    <siteMapNode title="Customer Care Home" url="UI/BillingAndCustomerCare/CustomerCare/Default.aspx">
+
+      <siteMapNode title="Payment Connection  :: Extra D.T. Payment" url="UI/BillingAndCustomerCare/CustomerCare/ExDataTransferPayment.aspx" />
+      <siteMapNode title="Payment Connection :: Cycle Payment" url="UI/BillingAndCustomerCare/CustomerCare/CyclePayment.aspx" />
+
+      <siteMapNode title="Broadband Subscriber :: Connection Shifting" url="UI/BillingAndCustomerCare/CustomerCare/ConnectionShifting.aspx" />
+      <siteMapNode title="Broadband Subscriber :: UpdateSubscriberDetails" url="UI/BillingAndCustomerCare/CustomerCare/UpdateSubscriberDetails.aspx" />
+
+      <siteMapNode title="Disconnection :: TemporaryDisconnection" url="UI/BillingAndCustomerCare/CustomerCare/TemporaryDisconnection.aspx" />
+      <!--<siteMapNode title="Disconnection :: TemporaryDisconnectionView" url="UI/BillingAndCustomerCare/CustomerCare/TemporaryDisconnectionView.aspx" />-->
+
+
+    </siteMapNode>
+
+      <siteMapNode title="Management Home" url="UI/Management/Default.aspx">
+          <siteMapNode title="Registration Report" url="UI/Management/RegistrationReport.aspx" />
+          <siteMapNode title="Bill Collection Report" url="UI/Management/PaymentCollectionReport.aspx" />
+          <siteMapNode title="User Connection Report" url="UI/Management/ConnectionReports.aspx" />
+      </siteMapNode>
+
+    <siteMapNode title="Sales Head Home" url="UI/MarketingAndSales/SalesHead/Default.aspx">
+
+      <siteMapNode title="Register Broadband User" url="UI/MarketingAndSales/SalesHead/UserRegistration.aspx" />
+
+      <siteMapNode title=" Connection Reports" url="UI/MarketingAndSales/SalesHead/RegisteredActiveConnections.aspx" />
+
+      <siteMapNode title="Manage Agents :: Agent Registration" url="UI/MarketingAndSales/SalesHead/AgentRegistration.aspx" />
+      <siteMapNode title="Manage Agents :: Agents View" url="UI/MarketingAndSales/SalesHead/AgentsView.aspx" />
+
+
+    </siteMapNode>
+
+    <siteMapNode title="Sales Executive Home" url="UI/MarketingAndSales/SalesExecutive/Default.aspx">
+
+      <siteMapNode title="Register Broadband User" url="UI/MarketingAndSales/SalesExecutive/UserRegistration.aspx" />
+
+      <siteMapNode title=" Connection Reports" url="UI/MarketingAndSales/SalesExecutive/RegisteredActiveConnections.aspx" />
+
+    </siteMapNode>
+
+    <siteMapNode title="Network Management Home" url="UI/NetworkManagement/Default.aspx">
+
+      <siteMapNode title="Pending Connection" url="UI/NetworkManagement/PendingConnections.aspx" />
+      <siteMapNode title="Service Request" url="UI/NetworkManagement/Rep_ViewServiceRequests.aspx" />
+
+      <siteMapNode title="Manage POP :: Add POP" url="UI/NetworkManagement/PointOfPresence.aspx" />
+      <siteMapNode title="Manage POP :: View POP" url="UI/NetworkManagement/PointOfPresenceView.aspx" />
+
+      <siteMapNode title="Search User" url="UI/NetworkManagement/SearchUser.aspx" />
+
+
+    </siteMapNode>
+
+    <siteMapNode title="System Management Home" url="UI/SystemManagement/Default.aspx">
+      <siteMapNode title="Register System User" url="UI/SystemManagement/RegisterSysUser.aspx" />
+      <siteMapNode title="Manage System Users" url="UI/SystemManagement/SysUsersManage.aspx" />
+    </siteMapNode>
+
+    <siteMapNode title="Direct Support Home" url="UI/TechnicalSupport/DirectSupport/Default.aspx">
+      <siteMapNode title="Broadband Support Request" url="UI/TechnicalSupport/DirectSupport/RaiseBroadbandSRDirect.aspx" />
+      <siteMapNode title="Service Requests" url="UI/TechnicalSupport/DirectSupport/Rep_ViewServiceRequests.aspx" />
+    </siteMapNode>
+
+    <siteMapNode title="Help Desk Home" url="UI/TechnicalSupport/HelpDesk/Default.aspx">
+      <siteMapNode title="Broadband Support Request" url="UI/TechnicalSupport/HelpDesk/RaiseBroadbandSR.aspx" />
+      <siteMapNode title="Service Requests" url="UI/TechnicalSupport/HelpDesk/Rep_ViewServiceRequests.aspx" />
+    </siteMapNode>
+
+
+  </siteMapNode>
+
+</siteMap>
+
+ 
+
+
+
+

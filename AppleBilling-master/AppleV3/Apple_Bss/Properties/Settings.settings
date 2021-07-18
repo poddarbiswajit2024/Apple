@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Apple_Bss.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Apple_Bss_PackageService_PackageManagementService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://223.27.120.2:10080/24online/services/PackageManagementService</Value>
+    </Setting>
+    <Setting Name="Apple_Bss_UserManageService_UserManagementService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://223.27.120.2:10080/24online/services/UserManagementService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

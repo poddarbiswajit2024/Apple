@@ -1,0 +1,10 @@
+﻿public enum FILETYPE
+{
+    USERPHOTO, IDPROOF,IDPROOFBACK, ADDRESSPROOF,ADDRESSPROOFBACK, CAFDOCUMENT, CAFANNEXURE,CAFSIGNATURE
+}
+
+public enum ApplicationValues2
+{
+    a,b, c, d
+}
+

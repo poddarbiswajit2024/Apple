@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BillingMaster.master.cs" Inherits="Apple_Bss.UI.BillingAndCustomerCare.Billing.BillingMaster" %>
+<%@ Register src="../../../UserControl/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="../../../UserControl/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<%@ Register src="BillMenu.ascx" tagname="BillMenu" tagprefix="uc4" %>
+
+<%@ Register src="../../../UserControl/SitePath.ascx" tagname="SitePath" tagprefix="uc3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Symbios Broadband Billing Section</title>
+   <link rel="stylesheet" href="../../../CSS/InetBill.css" media="screen" type="text/css" />
+    <script language="javascript" type="text/javascript">
+    function openPopup(strOpen)
+    {
+        open(strOpen, "Info", "status=1, width=800, height=700, top=50, left=50, scrollbar=yes");
+    }
+</script>
+
+ <script type="text/javascript" language="javascript">
+function PopupCenter(pageURL, title,w,h) 
+{
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+}
+</script>
+
+    <asp:ContentPlaceHolder ID="headerContentPlaceHolder" runat="server" ></asp:ContentPlaceHolder>
+</head>
+
+<body style="margin:0">
+    <form id="form1" runat="server"> 
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" 
+        bgcolor="White">
+            
+        <tr>
+            <td colspan="2">                                             
+                <uc1:Header ID="Header1" runat="server" />
+            </td>
+        </tr>
+        
+         <tr>
+            <td colspan="2" width="100%">                                             
+                   <uc4:BillMenu ID="BillMenu1" runat="server" />
+            </td>
+        </tr>
+    
+        <tr>
+            <td height="30px" 
+                style="background-image: url('../../../Images/Pictures/hor-bg.gif'); background-repeat: repeat-x; background-position: left top; padding-left:10px;" 
+                width="50%">
+                <uc3:SitePath ID="SitePath1" runat="server" />
+            </td>
+            <td height="30px" 
+                style="background-image: url('../../../Images/Pictures/hor-bg.gif'); background-repeat: repeat-x; background-position: left top" 
+                width="50%">
+            &nbsp;
+            </td>
+        </tr>
+    
+    
+    
+        
+        <tr>
+           <!-- Side Menu -->
+            
+            <td width="100%" valign="top"  class="tdContent" style="padding-left:20px;" colspan="2">
+                 
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                 
+            </td>
+        </tr>
+    
+        
+        <tr>
+            <td colspan="2" class="tagap">
+            &nbsp;
+            </td>
+        </tr>   
+                <uc2:Footer ID="Footer1" runat="server" />
+         
+    
+    </table>
+    
+    </form>
+</body>
+</html>
+
+
+

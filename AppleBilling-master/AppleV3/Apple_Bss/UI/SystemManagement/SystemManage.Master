@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SystemManage.master.cs" Inherits="Apple_Bss.UI.SystemManagement.SystemManage" %>
+
+<%@ Register src="~/UserControl/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="~/UserControl/Footer.ascx" tagname="Footer" tagprefix="uc3" %>
+<%@ Register src="SystemSideMenu.ascx" tagname="SystemSideMenu" tagprefix="uc2" %>
+
+<%@ Register src="../../UserControl/SitePath.ascx" tagname="SitePath" tagprefix="uc4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head  runat="server">
+
+    <title></title> 
+    <link href="../../CSS/InetBill.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+
+
+.mattblackmenu ul{
+margin: 0;
+padding-right: 6px;
+font: bold 9pt arial;
+list-style-type: none;
+overflow: hidden;
+width:auto;
+float:right;
+}
+
+.mattblackmenu li{
+display: inline;
+margin: 0;
+}
+
+
+.ddsubmenustyle, .ddsubmenustyle ul{ /*topmost and sub ULs, respectively*/
+font: normal 9pt arial;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid #dddddd;
+
+visibility: hidden;
+z-index: 100;
+width:auto;
+}
+
+    </style>
+</head>
+<body style="margin:0">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" 
+        bgcolor="White">
+            
+        <tr>
+            <td colspan="2">
+               
+                <uc1:Header ID="Header1" runat="server" />
+               
+            </td>
+        </tr>
+        <tr><td colspan="2"><uc2:SystemSideMenu ID="SystemSideMenu1" runat="server" /></td></tr>
+    
+        <tr>
+            <td height="30px" 
+                style="background-image: url('../../Images/Pictures/hor-bg.gif'); background-repeat: repeat-x; background-position: left top" 
+                width="50%">
+                <uc4:SitePath ID="SitePath1" runat="server" />
+            </td>
+            <td height="30px" 
+                style="background-image: url('../../Images/Pictures/hor-bg.gif'); background-repeat: repeat-x; background-position: left top">
+                 
+            </td>
+        </tr>
+     <tr>
+          
+            
+            <td width="100%" valign="top" class="tdgap" colspan="2">
+                 
+                &nbsp;</td>
+        </tr>
+       
+    
+        <tr>
+            
+            <td width="100%" valign="top" style="text-align: center" colspan="2" class="tdContent">           
+           
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+        </asp:ContentPlaceHolder>
+          
+            </td>
+                    
+        </tr>
+    
+        <tr>
+          
+            <td width="1%" 
+                    
+                style="background-image: url('../../../Images/Pictures/shadow.png'); background-repeat: repeat-y; background-position: left top" 
+                colspan="2" class="tdgap">
+                &nbsp;</td>
+        </tr>
+    
+                
+                <uc3:Footer ID="Footer1" runat="server" />
+                
+      
+    
+    </table>
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns3="http://exception.corporate.webservices.elitecore.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://packagemgt.webservices.elitecore.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://common.containers.corporate.webservices.elitecore.com" xmlns:tns2="http://packagemgt.containers.corporate.webservices.elitecore.com" xmlns:impl="http://packagemgt.webservices.elitecore.com" targetNamespace="http://packagemgt.webservices.elitecore.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://common.containers.corporate.webservices.elitecore.com">
+      <xsd:import namespace="http://packagemgt.webservices.elitecore.com" />
+      <xsd:import namespace="http://packagemgt.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://exception.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="AuthenticationObject">
+        <xsd:sequence>
+          <xsd:element name="IPAddress" nillable="true" type="xsd:string" />
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+          <xsd:element name="userName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://packagemgt.containers.corporate.webservices.elitecore.com">
+      <xsd:import namespace="http://packagemgt.webservices.elitecore.com" />
+      <xsd:import namespace="http://exception.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://common.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="PackageObject">
+        <xsd:sequence>
+          <xsd:element name="accessTimePolicyName" nillable="true" type="xsd:string" />
+          <xsd:element name="allottedTime" type="xsd:int" />
+          <xsd:element name="ancillaryCharge" type="xsd:double" />
+          <xsd:element name="bandwidthPolicyName" nillable="true" type="xsd:string" />
+          <xsd:element name="billingScheme" type="xsd:int" />
+          <xsd:element name="connectionType" type="xsd:int" />
+          <xsd:element name="dataTransferPolicyName" nillable="true" type="xsd:string" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="globalTaxCharge" type="xsd:double" />
+          <xsd:element name="netSecurityStatus" nillable="true" type="xsd:string" />
+          <xsd:element name="onlinePurchase" nillable="true" type="xsd:string" />
+          <xsd:element name="packageDefinition" type="xsd:int" />
+          <xsd:element name="packageDuration" type="xsd:int" />
+          <xsd:element name="packageName" nillable="true" type="xsd:string" />
+          <xsd:element name="packageStatus" nillable="true" type="xsd:string" />
+          <xsd:element name="packageTaxCharge" type="xsd:double" />
+          <xsd:element name="poolName" nillable="true" type="xsd:string" />
+          <xsd:element name="price" type="xsd:double" />
+          <xsd:element name="surfingPolicyName" nillable="true" type="xsd:string" />
+          <xsd:element name="billCycleAmtBasedOn" type="xsd:int" />
+          <xsd:element name="billDuration" type="xsd:int" />
+          <xsd:element name="billingDate_Day" type="xsd:int" />
+          <xsd:element name="bodAccountableValue" type="xsd:int" />
+          <xsd:element name="cycleType" nillable="true" type="xsd:string" />
+          <xsd:element name="fairAccessPolicyName" nillable="true" type="xsd:string" />
+          <xsd:element name="idleTimeout" type="xsd:int" />
+          <xsd:element name="proportionType" nillable="true" type="xsd:string" />
+          <xsd:element name="countAmtBasedOn" type="xsd:int" />
+          <xsd:element name="profileName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RenewalRuleObject">
+        <xsd:sequence>
+          <xsd:element name="addvaluebasedon" type="xsd:int" />
+          <xsd:element name="carryforwardBalance" type="xsd:int" />
+          <xsd:element name="carryforwardDataTransfer" type="xsd:int" />
+          <xsd:element name="carryforwardDuration" type="xsd:int" />
+          <xsd:element name="carryforwardHours" type="xsd:int" />
+          <xsd:element name="newPackagename" nillable="true" type="xsd:string" />
+          <xsd:element name="oldPackagename" nillable="true" type="xsd:string" />
+          <xsd:element name="renewalruleamtflag" type="xsd:int" />
+          <xsd:element name="shifttoNew" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://packagemgt.webservices.elitecore.com">
+      <xsd:import namespace="http://packagemgt.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://exception.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://common.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns3_PackageObject">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns2:PackageObject[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://exception.corporate.webservices.elitecore.com">
+      <xsd:import namespace="http://packagemgt.webservices.elitecore.com" />
+      <xsd:import namespace="http://packagemgt.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://common.containers.corporate.webservices.elitecore.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="AuthenticationException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AuthorizationException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OperationalException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InsufficientDataException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InvalidDataException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DuplicateDataException">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getPackageListResponse">
+    <wsdl:part name="getPackageListReturn" type="impl:ArrayOf_tns3_PackageObject" />
+  </wsdl:message>
+  <wsdl:message name="getPackageListRequest">
+    <wsdl:part name="in0" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="deletePackageRenewalRuleResponse">
+    <wsdl:part name="deletePackageRenewalRuleReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="deletePackageResponse">
+    <wsdl:part name="deletePackageReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationException">
+    <wsdl:part name="fault" type="tns3:AuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="getPackageDescriptionResponse">
+    <wsdl:part name="getPackageDescriptionReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getPackageListByFlagResponse">
+    <wsdl:part name="getPackageListByFlagReturn" type="impl:ArrayOf_tns3_PackageObject" />
+  </wsdl:message>
+  <wsdl:message name="createPackageRequest">
+    <wsdl:part name="in0" type="tns2:PackageObject" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="addPackageRenewalRuleResponse">
+    <wsdl:part name="addPackageRenewalRuleReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="getPackageListByIPAddressResponse">
+    <wsdl:part name="getPackageListByIPAddressReturn" type="impl:ArrayOf_tns3_PackageObject" />
+  </wsdl:message>
+  <wsdl:message name="InvalidDataException">
+    <wsdl:part name="fault" type="tns3:InvalidDataException" />
+  </wsdl:message>
+  <wsdl:message name="getPackageListByFlagRequest">
+    <wsdl:part name="in0" type="xsd:boolean" />
+    <wsdl:part name="in1" type="xsd:boolean" />
+    <wsdl:part name="in2" type="xsd:boolean" />
+    <wsdl:part name="in3" type="xsd:boolean" />
+    <wsdl:part name="in4" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="createPackageResponse">
+    <wsdl:part name="createPackageReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="getPackageListByIPAddressRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="getPackageDetailRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationException">
+    <wsdl:part name="fault" type="tns3:AuthorizationException" />
+  </wsdl:message>
+  <wsdl:message name="getOnlinePackageListResponse">
+    <wsdl:part name="getOnlinePackageListReturn" type="impl:ArrayOf_tns3_PackageObject" />
+  </wsdl:message>
+  <wsdl:message name="deletePackageRenewalRuleRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="DuplicateDataException">
+    <wsdl:part name="fault" type="tns3:DuplicateDataException" />
+  </wsdl:message>
+  <wsdl:message name="getPackageDetailResponse">
+    <wsdl:part name="getPackageDetailReturn" type="tns2:PackageObject" />
+  </wsdl:message>
+  <wsdl:message name="getOnlinePackageListRequest">
+    <wsdl:part name="in0" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="updatePackageRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns2:PackageObject" />
+    <wsdl:part name="in2" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="getPackageDescriptionRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="updatePackageResponse">
+    <wsdl:part name="updatePackageReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="deletePackageRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="OperationalException">
+    <wsdl:part name="fault" type="tns3:OperationalException" />
+  </wsdl:message>
+  <wsdl:message name="addPackageRenewalRuleRequest">
+    <wsdl:part name="in0" type="tns2:RenewalRuleObject" />
+    <wsdl:part name="in1" type="tns1:AuthenticationObject" />
+  </wsdl:message>
+  <wsdl:message name="InsufficientDataException">
+    <wsdl:part name="fault" type="tns3:InsufficientDataException" />
+  </wsdl:message>
+  <wsdl:portType name="PackageManagement">
+    <wsdl:operation name="getOnlinePackageList" parameterOrder="in0">
+      <wsdl:input name="getOnlinePackageListRequest" message="impl:getOnlinePackageListRequest" />
+      <wsdl:output name="getOnlinePackageListResponse" message="impl:getOnlinePackageListResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPackageDetail" parameterOrder="in0 in1">
+      <wsdl:input name="getPackageDetailRequest" message="impl:getPackageDetailRequest" />
+      <wsdl:output name="getPackageDetailResponse" message="impl:getPackageDetailResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPackageDescription" parameterOrder="in0 in1">
+      <wsdl:input name="getPackageDescriptionRequest" message="impl:getPackageDescriptionRequest" />
+      <wsdl:output name="getPackageDescriptionResponse" message="impl:getPackageDescriptionResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPackageList" parameterOrder="in0">
+      <wsdl:input name="getPackageListRequest" message="impl:getPackageListRequest" />
+      <wsdl:output name="getPackageListResponse" message="impl:getPackageListResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPackageListByFlag" parameterOrder="in0 in1 in2 in3 in4">
+      <wsdl:input name="getPackageListByFlagRequest" message="impl:getPackageListByFlagRequest" />
+      <wsdl:output name="getPackageListByFlagResponse" message="impl:getPackageListByFlagResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createPackage" parameterOrder="in0 in1">
+      <wsdl:input name="createPackageRequest" message="impl:createPackageRequest" />
+      <wsdl:output name="createPackageResponse" message="impl:createPackageResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="DuplicateDataException" message="impl:DuplicateDataException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePackage" parameterOrder="in0 in1 in2">
+      <wsdl:input name="updatePackageRequest" message="impl:updatePackageRequest" />
+      <wsdl:output name="updatePackageResponse" message="impl:updatePackageResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="DuplicateDataException" message="impl:DuplicateDataException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePackage" parameterOrder="in0 in1">
+      <wsdl:input name="deletePackageRequest" message="impl:deletePackageRequest" />
+      <wsdl:output name="deletePackageResponse" message="impl:deletePackageResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="addPackageRenewalRule" parameterOrder="in0 in1">
+      <wsdl:input name="addPackageRenewalRuleRequest" message="impl:addPackageRenewalRuleRequest" />
+      <wsdl:output name="addPackageRenewalRuleResponse" message="impl:addPackageRenewalRuleResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="DuplicateDataException" message="impl:DuplicateDataException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePackageRenewalRule" parameterOrder="in0 in1 in2">
+      <wsdl:input name="deletePackageRenewalRuleRequest" message="impl:deletePackageRenewalRuleRequest" />
+      <wsdl:output name="deletePackageRenewalRuleResponse" message="impl:deletePackageRenewalRuleResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="InvalidDataException" message="impl:InvalidDataException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="InsufficientDataException" message="impl:InsufficientDataException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPackageListByIPAddress" parameterOrder="in0 in1">
+      <wsdl:input name="getPackageListByIPAddressRequest" message="impl:getPackageListByIPAddressRequest" />
+      <wsdl:output name="getPackageListByIPAddressResponse" message="impl:getPackageListByIPAddressResponse" />
+      <wsdl:fault name="OperationalException" message="impl:OperationalException" />
+      <wsdl:fault name="AuthorizationException" message="impl:AuthorizationException" />
+      <wsdl:fault name="AuthenticationException" message="impl:AuthenticationException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PackageManagementServiceSoapBinding" type="impl:PackageManagement">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getOnlinePackageList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getOnlinePackageListRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getOnlinePackageListResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackageDetail">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPackageDetailRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPackageDetailResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackageDescription">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPackageDescriptionRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPackageDescriptionResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackageList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPackageListRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPackageListResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackageListByFlag">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPackageListByFlagRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPackageListByFlagResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPackage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createPackageRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createPackageResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="DuplicateDataException">
+        <wsdlsoap:fault use="encoded" name="DuplicateDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePackage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updatePackageRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updatePackageResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="DuplicateDataException">
+        <wsdlsoap:fault use="encoded" name="DuplicateDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deletePackage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deletePackageRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="deletePackageResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addPackageRenewalRule">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addPackageRenewalRuleRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="addPackageRenewalRuleResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="DuplicateDataException">
+        <wsdlsoap:fault use="encoded" name="DuplicateDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deletePackageRenewalRule">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deletePackageRenewalRuleRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="deletePackageRenewalRuleResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataException">
+        <wsdlsoap:fault use="encoded" name="InvalidDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="InsufficientDataException">
+        <wsdlsoap:fault use="encoded" name="InsufficientDataException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackageListByIPAddress">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPackageListByIPAddressRequest">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPackageListByIPAddressResponse">
+        <wsdlsoap:body use="encoded" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="OperationalException">
+        <wsdlsoap:fault use="encoded" name="OperationalException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthorizationException">
+        <wsdlsoap:fault use="encoded" name="AuthorizationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <wsdlsoap:fault use="encoded" name="AuthenticationException" namespace="http://packagemgt.webservices.elitecore.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PackageManagementService">
+    <wsdl:port name="PackageManagementService" binding="impl:PackageManagementServiceSoapBinding">
+      <wsdlsoap:address location="http://223.27.120.2:10080/24online/services/PackageManagementService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

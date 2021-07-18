@@ -1,0 +1,7 @@
+
+I have added 2 field in the the table  REGISTEREDUSERS the fields are  IDPROOFNAME_BACK
+ and ADDPROOFNAME_BACK the data type is nvarchar(200) for storing the back side of the 
+documents if necessary.
+
+The Field CAFNUMBER has been changed from int to Varcar(50)
+

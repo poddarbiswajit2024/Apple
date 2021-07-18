@@ -1,0 +1,2301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76969A79-58E1-43A5-940E-2211E1D5A808}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apple_Bss</RootNamespace>
+    <AssemblyName>Apple_Bss</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\AJAX FOLDERS\Ajax 3.5\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="obout_Grid_NET, Version=7.0.9.0, Culture=neutral, PublicKeyToken=5ddc49d3b53e3f98, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Hopeto\Documents\Visual Studio 2012\Controls\obout Suite for ASP.NET 3.5 and up\obout_Grid_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="SymBiosWebUtilities">
+      <HintPath>..\..\..\..\Program Files\DLLS\SymBiosWebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\POPType.xml" />
+    <Content Include="app_offlineon.htm" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Apple_Bss.dll" />
+    <Content Include="bin\Apple_Bss.pdb" />
+    <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\CrystalDecisions.Data.AdoDotNetInterop.dll" />
+    <Content Include="bin\CrystalDecisions.Enterprise.Framework.dll" />
+    <Content Include="bin\CrystalDecisions.Enterprise.InfoStore.dll" />
+    <Content Include="bin\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\CrystalDecisions.Web.dll" />
+    <Content Include="bin\obout_Grid_NET.dll" />
+    <Content Include="bin\SymBiosWebUtilities.dll" />
+    <Content Include="Default.aspx" />
+    <Content Include="Developer\Arrears.aspx" />
+    <Content Include="Developer\DeleteNewUserFirstBills.aspx" />
+    <Content Include="Developer\Usermanagement.aspx" />
+    <Content Include="Developer\UserMasterTable.aspx" />
+    <Content Include="emailtemplate_PasswordActivation.html" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Images\Buttons\documents.png" />
+    <Content Include="Images\Pictures\arrow.gif" />
+    <Content Include="Images\Pictures\billing.jpg" />
+    <Content Include="Images\Pictures\bullet.gif" />
+    <Content Include="LinkExpiryError.aspx" />
+    <Content Include="LocationGISMapping.aspx" />
+    <Content Include="Logo.gif" />
+    <Content Include="menuwithicons\images\Arrears.png" />
+    <Content Include="menuwithicons\images\Arrears1.png" />
+    <Content Include="menuwithicons\images\arrow.png" />
+    <Content Include="menuwithicons\images\bub.png" />
+    <Content Include="menuwithicons\images\bub2.png" />
+    <Content Include="menuwithicons\images\dark.png" />
+    <Content Include="menuwithicons\images\datatrasfer.png" />
+    <Content Include="menuwithicons\images\disconnection.png" />
+    <Content Include="menuwithicons\images\edit.png" />
+    <Content Include="menuwithicons\images\fibermng.png" />
+    <Content Include="menuwithicons\images\home.png" />
+    <Content Include="menuwithicons\images\ledger.png" />
+    <Content Include="menuwithicons\images\paycollection.png" />
+    <Content Include="menuwithicons\images\pending.png" />
+    <Content Include="menuwithicons\images\popmng.png" />
+    <Content Include="menuwithicons\images\report.png" />
+    <Content Include="menuwithicons\images\report1.png" />
+    <Content Include="menuwithicons\images\report2.png" />
+    <Content Include="menuwithicons\images\reports %28Copy%29.png" />
+    <Content Include="menuwithicons\images\reports.png" />
+    <Content Include="menuwithicons\images\rightarrow.png" />
+    <Content Include="menuwithicons\images\sereq.png" />
+    <Content Include="menuwithicons\images\srfix.png" />
+    <Content Include="menuwithicons\images\top1.png" />
+    <Content Include="menuwithicons\images\top2.png" />
+    <Content Include="menuwithicons\images\top4.png" />
+    <Content Include="menuwithicons\images\top5.png" />
+    <Content Include="menuwithicons\images\trafficplan.png" />
+    <Content Include="menuwithicons\images\user1.png" />
+    <Content Include="obj\Debug\Apple_Bss.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Apple_Bss.dll" />
+    <Content Include="obj\Debug\Apple_Bss.pdb" />
+    <Content Include="obj\Debug\Symb_InetBill.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\CodeFile.DataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CodeFile.SysEvents.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.DMP-BULKBILLS.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.FIRSTBILL-GST.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.FIRSTBILL.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.KOH-FIRSTBILL.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.KOH-NOTFIRSTBILL.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.NOTFIRSTBILL-GST.cs.dll" />
+    <Content Include="obj\Debug\TempPE\UI.Reports.NOTFIRSTBILL.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Web References.PackageService.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Web References.UserManageService.Reference.cs.dll" />
+    <Content Include="PasswordChange.aspx" />
+    <Content Include="PopPowerStatus\css.html" />
+    <Content Include="PopPowerStatus\Default.aspx" />
+    <Content Include="PopPowerStatus\Dimapur\DefaultTest.aspx" />
+    <Content Include="PopPowerStatus\Dimapur\Default.aspx" />
+    <Content Include="PopPowerStatus\Dimapur\PopStatusDetails.aspx" />
+    <Content Include="PopPowerStatus\icons\battery_available.png" />
+    <Content Include="PopPowerStatus\icons\battery_notavailable.png" />
+    <Content Include="PopPowerStatus\icons\current_available.png" />
+    <Content Include="PopPowerStatus\icons\current_notavailable.png" />
+    <Content Include="PopPowerStatus\icons\downanimated.gif" />
+    <Content Include="PopPowerStatus\images\logo.png" />
+    <Content Include="PopPowerStatus\images\reveal.png" />
+    <Content Include="PopPowerStatus\index.html" />
+    <Content Include="PopPowerStatus\Kohima\Default.aspx" />
+    <Content Include="PopPowerStatus\PopStatusDetails.aspx" />
+    <Content Include="PopPowerStatus\reveal.html" />
+    <Content Include="PopPowerStatus\symbiospopstatus.asmx" />
+    <Content Include="Stylesheet2020\css\bootstrap - limitless.css" />
+    <Content Include="Stylesheet2020\css\bootstrap.css" />
+    <Content Include="Stylesheet2020\css\bootstrap.min.css" />
+    <Content Include="Stylesheet2020\css\colors.css" />
+    <Content Include="Stylesheet2020\css\colors.min.css" />
+    <Content Include="Stylesheet2020\css\components.css" />
+    <Content Include="Stylesheet2020\css\components.min.css" />
+    <Content Include="Stylesheet2020\css\core.css" />
+    <Content Include="Stylesheet2020\css\core.min.css" />
+    <Content Include="Stylesheet2020\css\icons\icomoon\fonts\icomoon.svg" />
+    <Content Include="Stylesheet2020\css\icons\icomoon\styles.css" />
+    <Content Include="Stylesheet2020\images\backgrounds\boxed_bg.png" />
+    <Content Include="Stylesheet2020\images\backgrounds\boxed_bg_retina.png" />
+    <Content Include="Stylesheet2020\images\backgrounds\panel_bg.png" />
+    <Content Include="Stylesheet2020\images\backgrounds\seamless.png" />
+    <Content Include="Stylesheet2020\images\backgrounds\user_bg4.jpg" />
+    <Content Include="Stylesheet2020\images\cover.jpg" />
+    <Content Include="Stylesheet2020\images\login_cover.jpg" />
+    <Content Include="Stylesheet2020\images\logo-a.bmp" />
+    <Content Include="Stylesheet2020\images\logo2016.jpg" />
+    <Content Include="Stylesheet2020\images\logo_dark.png" />
+    <Content Include="Stylesheet2020\images\logo_demo.png" />
+    <Content Include="Stylesheet2020\images\logo_icon_dark.png" />
+    <Content Include="Stylesheet2020\images\logo_icon_light.png" />
+    <Content Include="Stylesheet2020\images\logo_light.png" />
+    <Content Include="Stylesheet2020\images\placeholder.jpg" />
+    <Content Include="Stylesheet2020\images\pnotify\danger.png" />
+    <Content Include="Stylesheet2020\images\pnotify\default.png" />
+    <Content Include="Stylesheet2020\images\pnotify\info.png" />
+    <Content Include="Stylesheet2020\images\pnotify\success.png" />
+    <Content Include="Stylesheet2020\images\pnotify\warning.png" />
+    <Content Include="Stylesheet2020\images\signature.png" />
+    <Content Include="Stylesheet2020\images\ui\datepicker_trigger.png" />
+    <Content Include="Stylesheet2020\images\ui\map_marker.png" />
+    <Content Include="Stylesheet2020\js\core\app.js" />
+    <Content Include="Stylesheet2020\js\core\app.min.js" />
+    <Content Include="Stylesheet2020\js\core\libraries\bootstrap.min.js" />
+    <Content Include="Stylesheet2020\js\core\libraries\jasny_bootstrap.min.js" />
+    <Content Include="Stylesheet2020\js\core\libraries\jquery.min.js" />
+    <Content Include="Stylesheet2020\js\core\libraries\jquery_ui\interactions.min.js" />
+    <Content Include="Stylesheet2020\js\pages\form_select2.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\editable\address.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\editable\editable.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\editable\wysihtml5.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\alpaca\alpaca.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\alpaca\price_format.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\autosize.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\duallistbox.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\formatter.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\maxlength.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\passy.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\touchspin.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\typeahead\handlebars.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\inputs\typeahead\typeahead.bundle.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\selects\bootstrap_multiselect.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\selects\bootstrap_select.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\selects\select2.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\selects\selectboxit.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\styling\switch.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\styling\switchery.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\styling\uniform.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\tags\tagsinput.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\tags\tokenfield.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\additional_methods.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ar.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ar.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_az.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_az.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_bg.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_bg.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_bn_BD.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_bn_BD.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ca.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ca.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_cs.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_cs.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_da.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_da.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_de.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_de.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_el.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_el.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es_AR.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es_AR.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es_PE.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_es_PE.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_et.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_et.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_eu.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_eu.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fa.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fa.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fi.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fi.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fr.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_fr.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ge.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ge.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_gl.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_gl.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_he.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_he.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hr.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hr.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hu.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hu.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hy_AM.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_hy_AM.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_id.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_id.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_is.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_is.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_it.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_it.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ja.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ja.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ka.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ka.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_kk.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_kk.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ko.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ko.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_lt.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_lt.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_lv.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_lv.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_mk.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_mk.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_my.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_my.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_nl.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_nl.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_no.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_no.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pl.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pl.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pt_BR.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pt_BR.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pt_PT.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_pt_PT.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ro.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ro.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ru.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ru.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_si.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_si.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sk.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sk.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sl.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sl.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sr.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sr.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sr_lat.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sr_lat.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sv.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_sv.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_th.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_th.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_tj.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_tj.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_tr.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_tr.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_uk.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_uk.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ur.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_ur.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_vi.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_vi.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_zh.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_zh.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_zh_TW.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\messages_zh_TW.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_de.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_de.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_es_CL.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_es_CL.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_fi.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_fi.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_nl.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_nl.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_pt.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\localization\methods_pt.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\validation\validate.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\wizards\form_wizard\form.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\wizards\form_wizard\form_wizard.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\wizards\steps.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\forms\wizards\stepy.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\loaders\blockui.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\loaders\pace.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\loaders\progressbar.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\anytime.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-de.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-dk.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-es.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-fa.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-fi.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-fr.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-he.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-it.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-ja.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-nl.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-pt-br.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-ru.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-sv.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-tr.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\i18n\jquery.spectrum-zh-cn.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\color\spectrum.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\datepicker.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\daterangepicker.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\location\autocomplete_addresspicker.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\location\location.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\location\typeahead_addresspicker.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\legacy.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\picker.date.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\picker.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\picker.time.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ar.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\bg_BG.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\bs_BA.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ca_ES.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\cs_CZ.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\da_DK.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\de_DE.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\el_GR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\es_ES.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\et_EE.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\eu_ES.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\fi_FI.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\fr_FR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\gl_ES.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\he_IL.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\hr_HR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\hu_HU.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\id_ID.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\is_IS.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\it_IT.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ja_JP.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ko_KR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ne_NP.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\nl_NL.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\no_NO.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\pl_PL.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\pt_BR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\pt_PT.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ro_RO.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\ru_RU.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\sk_SK.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\sl_SI.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\sv_SE.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\th_TH.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\tr_TR.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\uk_UA.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\vi_VN.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\zh_CN.js" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\zh_TW.js" />
+    <Content Include="Stylesheet2020\js\plugins\tables\datatables\extensions\footable.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\tables\datatables\extensions\responsive.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\tables\datatables\extensions\table_responsive.js" />
+    <Content Include="Stylesheet2020\js\plugins\tables\table_responsive.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\dragula.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\drilldown.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fab.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\af.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\all.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar-dz.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar-ly.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar-tn.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ar.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\bg.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ca.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\cs.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\da.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\de-at.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\de.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\el.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\en-au.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\en-ca.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\en-gb.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\en-ie.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\en-nz.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\es-do.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\es.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\eu.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\fa.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\fi.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\fr-ch.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\fr.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\gl.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\he.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\hi.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\hr.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\hu.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\id.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\is.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\it.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ja.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\kk.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ko.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\lb.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\lt.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\lv.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\mk.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ms-my.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ms.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\nb.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\nl-be.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\nl.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\nn.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\pl.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\pt-br.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\pt.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ro.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\ru.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\sk.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\sl.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\sr.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\sv.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\th.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\tr.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\uk.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\vi.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\headroom\headroom.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\headroom\headroom_jquery.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\moment\moment.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\moment\moment_locales.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\nicescroll.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\prism.min.js" />
+    <Content Include="Stylesheet2020\js\plugins\ui\ripple.min.js" />
+    <Content Include="Stylesheet2020\ThemeJS\bootstrap_select.min.js" />
+    <Content Include="Stylesheet2020\ThemeJS\footable.min.js" />
+    <Content Include="Stylesheet2020\ThemeJS\form_bootstrap_select.js" />
+    <Content Include="Stylesheet2020\ThemeJS\form_select2.js" />
+    <Content Include="Stylesheet2020\ThemeJS\jquery-ui.min.js" />
+    <Content Include="Stylesheet2020\ThemeJS\moment.min.js" />
+    <Content Include="Stylesheet2020\ThemeJS\select2.min.js" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\bill-plan-change-immdidate-notes.txt" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillMenu.ascx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentsList.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\CollectionReportDayWise.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentCorrection.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\PaymentCycleChange.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\PayUTransactions.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\MoreBytes.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsers.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ClientSearchView.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReportDayWise.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsersDocuments.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\Rep_ViewServiceRequests.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\UpdateUserPOPDetails.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFilesOnebyOne.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestsFixedList.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestDetail.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ViewBroadbandUserInfo.aspx" />
+    <Content Include="UI\Management\SystemUserMenu.ascx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\DefaultPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\EditRegistrationPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrations2020.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrationsAll.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ManageRegistrationsPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocuments.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocumentsPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UserRegisterPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocuments.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocumentsPaperless.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ViewPaperless.aspx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\CablePendingSRs.aspx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\ServiceRequestsList.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\CableSRReport.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\ClientSearchView.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\RaiseCableUserSR.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\ServiceRequestDetail.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\ServiceRequestSearch.aspx" />
+    <Content Include="UploadedFiles\Subscribers\CAF004_userphoto20160810021013.jpg" />
+    <Content Include="UploadedFiles\Subscribers\CAF004_userphoto20160810021013_thumb.jpg" />
+    <Content Include="UploadedFiles\Subscribers\CAF007_userphoto20160810020553.jpg" />
+    <Content Include="UploadedFiles\Subscribers\CAF007_userphoto20160810020553_thumb.jpg" />
+    <Content Include="UserControl\ClientSearchView.ascx" />
+    <Content Include="UserControl\Footer.ascx" />
+    <Content Include="UserControl\Header.ascx" />
+    <Content Include="UserControl\LoggedActivityPaperless.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeFile\AccountMaster.cs" />
+    <Compile Include="CodeFile\ArrearsAndWaivers.cs" />
+    <Compile Include="CodeFile\BillCycles.cs" />
+    <Compile Include="CodeFile\BillCycleType.cs" />
+    <Compile Include="CodeFile\BillDetails.cs" />
+    <Compile Include="CodeFile\BroadbandAgents.cs" />
+    <Compile Include="CodeFile\TariffPlanChange.cs" />
+    <Compile Include="CodeFile\BroadbandBillPlans.cs" />
+    <Compile Include="CodeFile\BroadbandSubscriberBills.cs" />
+    <Compile Include="CodeFile\BroadbandSubscriberLedgers.cs" />
+    <Compile Include="CodeFile\BroadbandUser.cs" />
+    <Compile Include="CodeFile\BroadbandUserBillingInfo.cs" />
+    <Compile Include="CodeFile\BroadbandUserConectivityDetails.cs" />
+    <Compile Include="CodeFile\BroadbandUserStatus.cs" />
+    <Compile Include="CodeFile\ServiceCallsCable.cs" />
+    <Compile Include="CodeFile\LAPMaster.cs" />
+    <Compile Include="CodeFile\enums.cs" />
+    <Compile Include="CodeFile\developerLogic.cs" />
+    <Compile Include="CodeFile\PermanentDisconnectionLogic.cs" />
+    <Compile Include="CodeFile\UpdateStatusEnumValue.cs" />
+    <Compile Include="CodeFile\SMS_SR.cs" />
+    <Compile Include="CodeFile\DarkFiberPayments.cs" />
+    <Compile Include="CodeFile\DarkFiber.cs" />
+    <Compile Include="CodeFile\CustomerPayments.cs" />
+    <Compile Include="CodeFile\DataTransferSlabs.cs" />
+    <Compile Include="CodeFile\DataTransferUtilities.cs" />
+    <Compile Include="CodeFile\DBConn.cs" />
+    <Compile Include="CodeFile\DiscountsAndWaivers.cs" />
+    <Compile Include="CodeFile\Encryption.cs" />
+    <Compile Include="CodeFile\ExDtPayment.cs" />
+    <Compile Include="CodeFile\FiberMaintenance.cs" />
+    <Compile Include="CodeFile\GridViewBoundFieldAccess.cs" />
+    <Compile Include="CodeFile\HttpSecureCookie.cs" />
+    <Compile Include="CodeFile\ImageManage.cs" />
+    <Compile Include="CodeFile\ISubscribers.asmx.cs">
+      <DependentUpon>ISubscribers.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeFile\LogEvents.cs" />
+    <Compile Include="CodeFile\Pop.cs" />
+    <Compile Include="CodeFile\PopMaintenance.cs" />
+    <Compile Include="CodeFile\References.cs" />
+    <Compile Include="CodeFile\RegisteredBroadbandUsers.cs" />
+    <Compile Include="CodeFile\RegOTRCPlans.cs" />
+    <Compile Include="CodeFile\ServiceCalls.cs" />
+    <Compile Include="CodeFile\ServiceCallStatus.cs" />
+    <Compile Include="CodeFile\ServiceRequestLogs.cs" />
+    <Compile Include="CodeFile\SessionDetails.cs" />
+    <Compile Include="CodeFile\SubscriberLedgers.cs" />
+    <Compile Include="CodeFile\SystemEventLog.cs" />
+    <Compile Include="CodeFile\SystemUsers.cs" />
+    <Compile Include="CodeFile\TempDisconnectionDetails.cs" />
+    <Compile Include="CodeFile\UIModuleType.cs" />
+    <Compile Include="CodeFile\UpdateStatus.cs" />
+    <Compile Include="CodeFile\Utilities.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\Arrears.aspx.cs">
+      <DependentUpon>Arrears.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Developer\Arrears.aspx.designer.cs">
+      <DependentUpon>Arrears.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\DeleteNewUserFirstBills.aspx.cs">
+      <DependentUpon>DeleteNewUserFirstBills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Developer\DeleteNewUserFirstBills.aspx.designer.cs">
+      <DependentUpon>DeleteNewUserFirstBills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\Usermanagement.aspx.cs">
+      <DependentUpon>Usermanagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Developer\Usermanagement.aspx.designer.cs">
+      <DependentUpon>Usermanagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\UserMasterTable.aspx.cs">
+      <DependentUpon>UserMasterTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Developer\UserMasterTable.aspx.designer.cs">
+      <DependentUpon>UserMasterTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinkExpiryError.aspx.cs">
+      <DependentUpon>LinkExpiryError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinkExpiryError.aspx.designer.cs">
+      <DependentUpon>LinkExpiryError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocationGISMapping.aspx.cs">
+      <DependentUpon>LocationGISMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocationGISMapping.aspx.designer.cs">
+      <DependentUpon>LocationGISMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.designer.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\DefaultTest.aspx.cs">
+      <DependentUpon>DefaultTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\DefaultTest.aspx.designer.cs">
+      <DependentUpon>DefaultTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\PopStatusDetails.aspx.cs">
+      <DependentUpon>PopStatusDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\Dimapur\PopStatusDetails.aspx.designer.cs">
+      <DependentUpon>PopStatusDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\Kohima\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\Kohima\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\PopStatusDetails.aspx.cs">
+      <DependentUpon>PopStatusDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopPowerStatus\PopStatusDetails.aspx.designer.cs">
+      <DependentUpon>PopStatusDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopPowerStatus\symbiospopstatus.asmx.cs">
+      <DependentUpon>symbiospopstatus.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ArrearWaiverHistory.aspx.cs">
+      <DependentUpon>ArrearWaiverHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ArrearWaiverHistory.aspx.designer.cs">
+      <DependentUpon>ArrearWaiverHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillingMaster.Master.cs">
+      <DependentUpon>BillingMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillingMaster.Master.designer.cs">
+      <DependentUpon>BillingMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillPlanChange.aspx.cs">
+      <DependentUpon>BillPlanChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillPlanChange.aspx.designer.cs">
+      <DependentUpon>BillPlanChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillRaised.aspx.cs">
+      <DependentUpon>BillRaised.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillRaised.aspx.designer.cs">
+      <DependentUpon>BillRaised.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillToBeRaised.aspx.cs">
+      <DependentUpon>BillToBeRaised.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillToBeRaised.aspx.designer.cs">
+      <DependentUpon>BillToBeRaised.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentsList.aspx.cs">
+      <DependentUpon>OnlinePaymentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentsList.aspx.designer.cs">
+      <DependentUpon>OnlinePaymentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BroadBandSubscriberLedgerView.aspx.cs">
+      <DependentUpon>BroadBandSubscriberLedgerView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BroadBandSubscriberLedgerView.aspx.designer.cs">
+      <DependentUpon>BroadBandSubscriberLedgerView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ConfirmConnection.aspx.cs">
+      <DependentUpon>ConfirmConnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ConfirmConnection.aspx.designer.cs">
+      <DependentUpon>ConfirmConnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillPaymentDarkFiber.aspx.cs">
+      <DependentUpon>BillPaymentDarkFiber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillPaymentDarkFiber.aspx.designer.cs">
+      <DependentUpon>BillPaymentDarkFiber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CollectionReportDayWise.aspx.cs">
+      <DependentUpon>CollectionReportDayWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CollectionReportDayWise.aspx.designer.cs">
+      <DependentUpon>CollectionReportDayWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentCorrection.aspx.cs">
+      <DependentUpon>OnlinePaymentCorrection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\OnlinePaymentCorrection.aspx.designer.cs">
+      <DependentUpon>OnlinePaymentCorrection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PaymentCycleChange.aspx.cs">
+      <DependentUpon>PaymentCycleChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PaymentCycleChange.aspx.designer.cs">
+      <DependentUpon>PaymentCycleChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CSVFileUpload.aspx.cs">
+      <DependentUpon>CSVFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CSVFileUpload.aspx.designer.cs">
+      <DependentUpon>CSVFileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CollectionReport.aspx.cs">
+      <DependentUpon>CollectionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\CollectionReport.aspx.designer.cs">
+      <DependentUpon>CollectionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\DisconnectedUsersView.aspx.cs">
+      <DependentUpon>DisconnectedUsersView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\DisconnectedUsersView.aspx.designer.cs">
+      <DependentUpon>DisconnectedUsersView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\DisconnectionActivate.aspx.cs">
+      <DependentUpon>DisconnectionActivate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\DisconnectionActivate.aspx.designer.cs">
+      <DependentUpon>DisconnectionActivate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PayUTransactions.aspx.cs">
+      <DependentUpon>PayUTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PayUTransactions.aspx.designer.cs">
+      <DependentUpon>PayUTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PostArrears.aspx.cs">
+      <DependentUpon>PostArrears.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PostArrears.aspx.designer.cs">
+      <DependentUpon>PostArrears.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PostWaivers.aspx.cs">
+      <DependentUpon>PostWaivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\PostWaivers.aspx.designer.cs">
+      <DependentUpon>PostWaivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillMenu.ascx.cs">
+      <DependentUpon>BillMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\BillMenu.ascx.designer.cs">
+      <DependentUpon>BillMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\MoreBytes.aspx.cs">
+      <DependentUpon>MoreBytes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\MoreBytes.aspx.designer.cs">
+      <DependentUpon>MoreBytes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\SubscriberBillDisplay.aspx.cs">
+      <DependentUpon>SubscriberBillDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\SubscriberBillDisplay.aspx.designer.cs">
+      <DependentUpon>SubscriberBillDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\SubscriberInfoDetails.aspx.cs">
+      <DependentUpon>SubscriberInfoDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\SubscriberInfoDetails.aspx.designer.cs">
+      <DependentUpon>SubscriberInfoDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDataUsageDetails.aspx.cs">
+      <DependentUpon>ViewDataUsageDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDataUsageDetails.aspx.designer.cs">
+      <DependentUpon>ViewDataUsageDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDTTFUploadDetails.aspx.cs">
+      <DependentUpon>ViewDTTFUploadDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDTTFUploadDetails.aspx.designer.cs">
+      <DependentUpon>ViewDTTFUploadDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDTUsageBreakUp.aspx.cs">
+      <DependentUpon>ViewDTUsageBreakUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewDTUsageBreakUp.aspx.designer.cs">
+      <DependentUpon>ViewDTUsageBreakUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsers.aspx.cs">
+      <DependentUpon>BroadbandUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsers.aspx.designer.cs">
+      <DependentUpon>BroadbandUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ClientSearchView.aspx.cs">
+      <DependentUpon>ClientSearchView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ClientSearchView.aspx.designer.cs">
+      <DependentUpon>ClientSearchView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReportDayWise.aspx.cs">
+      <DependentUpon>CollectionReportDayWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReportDayWise.aspx.designer.cs">
+      <DependentUpon>CollectionReportDayWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsersDocuments.aspx.cs">
+      <DependentUpon>BroadbandUsersDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandUsersDocuments.aspx.designer.cs">
+      <DependentUpon>BroadbandUsersDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\Rep_ViewServiceRequests.aspx.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\Rep_ViewServiceRequests.aspx.designer.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UpdateUserPOPDetails.aspx.cs">
+      <DependentUpon>UpdateUserPOPDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UpdateUserPOPDetails.aspx.designer.cs">
+      <DependentUpon>UpdateUserPOPDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFilesOnebyOne.aspx.cs">
+      <DependentUpon>UploadSubscriberFilesOnebyOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFilesOnebyOne.aspx.designer.cs">
+      <DependentUpon>UploadSubscriberFilesOnebyOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\PermanentDisconnection.aspx.cs">
+      <DependentUpon>PermanentDisconnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\PermanentDisconnection.aspx.designer.cs">
+      <DependentUpon>PermanentDisconnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestsFixedList.aspx.cs">
+      <DependentUpon>ServiceRequestsFixedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestsFixedList.aspx.designer.cs">
+      <DependentUpon>ServiceRequestsFixedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestDetail.aspx.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ServiceRequestDetail.aspx.designer.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFiles.aspx.cs">
+      <DependentUpon>UploadSubscriberFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFiles.aspx.designer.cs">
+      <DependentUpon>UploadSubscriberFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberBill.aspx.cs">
+      <DependentUpon>ViewSubscriberBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberBill.aspx.designer.cs">
+      <DependentUpon>ViewSubscriberBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberFirstBill.aspx.cs">
+      <DependentUpon>ViewSubscriberFirstBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberFirstBill.aspx.designer.cs">
+      <DependentUpon>ViewSubscriberFirstBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewUserSessionDetails.aspx.cs">
+      <DependentUpon>ViewUserSessionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\Billing\ViewUserSessionDetails.aspx.designer.cs">
+      <DependentUpon>ViewUserSessionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandSubscriberLedger.aspx.cs">
+      <DependentUpon>BroadbandSubscriberLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandSubscriberLedger.aspx.designer.cs">
+      <DependentUpon>BroadbandSubscriberLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ConnectionShifting.aspx.cs">
+      <DependentUpon>ConnectionShifting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ConnectionShifting.aspx.designer.cs">
+      <DependentUpon>ConnectionShifting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CustomerCare.Master.cs">
+      <DependentUpon>CustomerCare.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CustomerCare.Master.designer.cs">
+      <DependentUpon>CustomerCare.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CyclePayment.aspx.cs">
+      <DependentUpon>CyclePayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CyclePayment.aspx.designer.cs">
+      <DependentUpon>CyclePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReport.aspx.cs">
+      <DependentUpon>CollectionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReport.aspx.designer.cs">
+      <DependentUpon>CollectionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ExDataTransferPayment.aspx.cs">
+      <DependentUpon>ExDataTransferPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ExDataTransferPayment.aspx.designer.cs">
+      <DependentUpon>ExDataTransferPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\SideMenu.ascx.cs">
+      <DependentUpon>SideMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\SideMenu.ascx.designer.cs">
+      <DependentUpon>SideMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\TemporaryDisconnection.aspx.cs">
+      <DependentUpon>TemporaryDisconnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\TemporaryDisconnection.aspx.designer.cs">
+      <DependentUpon>TemporaryDisconnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UpdateSubscriberDetails.aspx.cs">
+      <DependentUpon>UpdateSubscriberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\UpdateSubscriberDetails.aspx.designer.cs">
+      <DependentUpon>UpdateSubscriberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ViewBroadbandUserInfo.aspx.cs">
+      <DependentUpon>ViewBroadbandUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BillingAndCustomerCare\CustomerCare\ViewBroadbandUserInfo.aspx.designer.cs">
+      <DependentUpon>ViewBroadbandUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\AmountCollected.aspx.cs">
+      <DependentUpon>AmountCollected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\AmountCollected.aspx.designer.cs">
+      <DependentUpon>AmountCollected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\BillCollectionSummary.aspx.cs">
+      <DependentUpon>BillCollectionSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\BillCollectionSummary.aspx.designer.cs">
+      <DependentUpon>BillCollectionSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\ConnectionReports.aspx.cs">
+      <DependentUpon>ConnectionReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\ConnectionReports.aspx.designer.cs">
+      <DependentUpon>ConnectionReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\Management.Master.cs">
+      <DependentUpon>Management.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\Management.Master.designer.cs">
+      <DependentUpon>Management.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\MgmtMenu.ascx.cs">
+      <DependentUpon>MgmtMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\MgmtMenu.ascx.designer.cs">
+      <DependentUpon>MgmtMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\MonthRegDisplay.aspx.cs">
+      <DependentUpon>MonthRegDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\MonthRegDisplay.aspx.designer.cs">
+      <DependentUpon>MonthRegDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\PaymentCollectionReport.aspx.cs">
+      <DependentUpon>PaymentCollectionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\PaymentCollectionReport.aspx.designer.cs">
+      <DependentUpon>PaymentCollectionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\RegistrationReport.aspx.cs">
+      <DependentUpon>RegistrationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\RegistrationReport.aspx.designer.cs">
+      <DependentUpon>RegistrationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Management\SystemUserMenu.ascx.cs">
+      <DependentUpon>SystemUserMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Management\SystemUserMenu.ascx.designer.cs">
+      <DependentUpon>SystemUserMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\AddConnectionReference.aspx.cs">
+      <DependentUpon>AddConnectionReference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\AddConnectionReference.aspx.designer.cs">
+      <DependentUpon>AddConnectionReference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\EditRegistration.aspx.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\EditRegistration.aspx.designer.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\RegisteredConnections.aspx.cs">
+      <DependentUpon>RegisteredConnections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\RegisteredConnections.aspx.designer.cs">
+      <DependentUpon>RegisteredConnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\SalesAgent.Master.cs">
+      <DependentUpon>SalesAgent.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\SalesAgent.Master.designer.cs">
+      <DependentUpon>SalesAgent.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\salesAgentMenu.ascx.cs">
+      <DependentUpon>salesAgentMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesExecutive\salesAgentMenu.ascx.designer.cs">
+      <DependentUpon>salesAgentMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentEdit.aspx.cs">
+      <DependentUpon>AgentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentEdit.aspx.designer.cs">
+      <DependentUpon>AgentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentRegistration.aspx.cs">
+      <DependentUpon>AgentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentRegistration.aspx.designer.cs">
+      <DependentUpon>AgentRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentsView.aspx.cs">
+      <DependentUpon>AgentsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\AgentsView.aspx.designer.cs">
+      <DependentUpon>AgentsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ConnectionReports.aspx.cs">
+      <DependentUpon>ConnectionReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ConnectionReports.aspx.designer.cs">
+      <DependentUpon>ConnectionReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\DefaultPaperless.aspx.cs">
+      <DependentUpon>DefaultPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\DefaultPaperless.aspx.designer.cs">
+      <DependentUpon>DefaultPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\EditRegistrationPaperless.aspx.cs">
+      <DependentUpon>EditRegistrationPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\EditRegistrationPaperless.aspx.designer.cs">
+      <DependentUpon>EditRegistrationPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrations2020.aspx.cs">
+      <DependentUpon>ManagePendingUserRegistrations2020.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrations2020.aspx.designer.cs">
+      <DependentUpon>ManagePendingUserRegistrations2020.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrationsAll.aspx.cs">
+      <DependentUpon>ManagePendingUserRegistrationsAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManagePendingUserRegistrationsAll.aspx.designer.cs">
+      <DependentUpon>ManagePendingUserRegistrationsAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManageRegistrationsPaperless.aspx.cs">
+      <DependentUpon>ManageRegistrationsPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ManageRegistrationsPaperless.aspx.designer.cs">
+      <DependentUpon>ManageRegistrationsPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesMaster.Master.cs">
+      <DependentUpon>SalesMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesMaster.Master.designer.cs">
+      <DependentUpon>SalesMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocuments.aspx.cs">
+      <DependentUpon>UpdateUserRegistrationDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocuments.aspx.designer.cs">
+      <DependentUpon>UpdateUserRegistrationDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocumentsPaperless.aspx.cs">
+      <DependentUpon>UpdateUserRegistrationDocumentsPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UpdateUserRegistrationDocumentsPaperless.aspx.designer.cs">
+      <DependentUpon>UpdateUserRegistrationDocumentsPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegisterPaperless.aspx.cs">
+      <DependentUpon>UserRegisterPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegisterPaperless.aspx.designer.cs">
+      <DependentUpon>UserRegisterPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocuments.aspx.cs">
+      <DependentUpon>UserRegistrationDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocuments.aspx.designer.cs">
+      <DependentUpon>UserRegistrationDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocumentsPaperless.aspx.cs">
+      <DependentUpon>UserRegistrationDocumentsPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistrationDocumentsPaperless.aspx.designer.cs">
+      <DependentUpon>UserRegistrationDocumentsPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ViewPaperless.aspx.cs">
+      <DependentUpon>ViewPaperless.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ViewPaperless.aspx.designer.cs">
+      <DependentUpon>ViewPaperless.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\AddLinkDF.aspx.cs">
+      <DependentUpon>AddLinkDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\AddLinkDF.aspx.designer.cs">
+      <DependentUpon>AddLinkDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\DarkFiberConnections.aspx.cs">
+      <DependentUpon>DarkFiberConnections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\DarkFiberConnections.aspx.designer.cs">
+      <DependentUpon>DarkFiberConnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\FIRSTBILL-GST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIRSTBILL-GST.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\NOTFIRSTBILL-GST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NOTFIRSTBILL-GST.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\DarkFiberUserRegister.aspx.cs">
+      <DependentUpon>DarkFiberUserRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\DarkFiberUserRegister.aspx.designer.cs">
+      <DependentUpon>DarkFiberUserRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\EditRegistration.aspx.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\EditRegistration.aspx.designer.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ViewRegisteredConnections.aspx.cs">
+      <DependentUpon>ViewRegisteredConnections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\ViewRegisteredConnections.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredConnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesHead.Master.cs">
+      <DependentUpon>SalesHead.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesHead.Master.designer.cs">
+      <DependentUpon>SalesHead.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesHeadMenu.ascx.cs">
+      <DependentUpon>SalesHeadMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\SalesHeadMenu.ascx.designer.cs">
+      <DependentUpon>SalesHeadMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MarketingAndSales\SalesHead\UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\DailyFiberMaintenance.aspx.cs">
+      <DependentUpon>DailyFiberMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\DailyFiberMaintenance.aspx.designer.cs">
+      <DependentUpon>DailyFiberMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\NwImplementation.Master.cs">
+      <DependentUpon>NwImplementation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\NwImplementation.Master.designer.cs">
+      <DependentUpon>NwImplementation.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\NwImpMenu.ascx.cs">
+      <DependentUpon>NwImpMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\NwImpMenu.ascx.designer.cs">
+      <DependentUpon>NwImpMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\DailyPopMaintenance.aspx.cs">
+      <DependentUpon>DailyPopMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\DailyPopMaintenance.aspx.designer.cs">
+      <DependentUpon>DailyPopMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\Reg_UserConnectivityDetails.aspx.cs">
+      <DependentUpon>Reg_UserConnectivityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkImplementation\Reg_UserConnectivityDetails.aspx.designer.cs">
+      <DependentUpon>Reg_UserConnectivityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\BroadbandUsers.aspx.cs">
+      <DependentUpon>BroadbandUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\BroadbandUsers.aspx.designer.cs">
+      <DependentUpon>BroadbandUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ConnectUser.aspx.cs">
+      <DependentUpon>ConnectUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ConnectUser.aspx.designer.cs">
+      <DependentUpon>ConnectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\FiberMaintenanceReport.aspx.cs">
+      <DependentUpon>FiberMaintenanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\FiberMaintenanceReport.aspx.designer.cs">
+      <DependentUpon>FiberMaintenanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\NetworkManagement.Master.cs">
+      <DependentUpon>NetworkManagement.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\NetworkManagement.Master.designer.cs">
+      <DependentUpon>NetworkManagement.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PendingConnections.aspx.cs">
+      <DependentUpon>PendingConnections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PendingConnections.aspx.designer.cs">
+      <DependentUpon>PendingConnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresence.aspx.cs">
+      <DependentUpon>PointOfPresence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresence.aspx.designer.cs">
+      <DependentUpon>PointOfPresence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresenceEdit.aspx.cs">
+      <DependentUpon>PointOfPresenceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresenceEdit.aspx.designer.cs">
+      <DependentUpon>PointOfPresenceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresenceView.aspx.cs">
+      <DependentUpon>PointOfPresenceView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PointOfPresenceView.aspx.designer.cs">
+      <DependentUpon>PointOfPresenceView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PopMaintenanceReport.aspx.cs">
+      <DependentUpon>PopMaintenanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\PopMaintenanceReport.aspx.designer.cs">
+      <DependentUpon>PopMaintenanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\RegisteredUserInfoDetails.aspx.cs">
+      <DependentUpon>RegisteredUserInfoDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\RegisteredUserInfoDetails.aspx.designer.cs">
+      <DependentUpon>RegisteredUserInfoDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Rep_ViewServiceRequests.aspx.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\Rep_ViewServiceRequests.aspx.designer.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ServiceRequestDetail.aspx.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ServiceRequestDetail.aspx.designer.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ViewBroadbandUserInfo.aspx.cs">
+      <DependentUpon>ViewBroadbandUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NetworkManagement\ViewBroadbandUserInfo.aspx.designer.cs">
+      <DependentUpon>ViewBroadbandUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\FIRSTBILL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIRSTBILL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\NOTFIRSTBILL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NOTFIRSTBILL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\DOB.ascx.cs">
+      <DependentUpon>DOB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\DOB.ascx.designer.cs">
+      <DependentUpon>DOB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\PopUpUserDetails.aspx.cs">
+      <DependentUpon>PopUpUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\PopUpUserDetails.aspx.designer.cs">
+      <DependentUpon>PopUpUserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\RegisterSysUser.aspx.cs">
+      <DependentUpon>RegisterSysUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\RegisterSysUser.aspx.designer.cs">
+      <DependentUpon>RegisterSysUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SystemManage.Master.cs">
+      <DependentUpon>SystemManage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SystemManage.Master.designer.cs">
+      <DependentUpon>SystemManage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SystemSideMenu.ascx.cs">
+      <DependentUpon>SystemSideMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SystemSideMenu.ascx.designer.cs">
+      <DependentUpon>SystemSideMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SysUsersManage.aspx.cs">
+      <DependentUpon>SysUsersManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManagement\SysUsersManage.aspx.designer.cs">
+      <DependentUpon>SysUsersManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\Controls\ActionHistory.ascx.cs">
+      <DependentUpon>ActionHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\Controls\ActionHistory.ascx.designer.cs">
+      <DependentUpon>ActionHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\CablePendingSRs.aspx.cs">
+      <DependentUpon>CablePendingSRs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\CablePendingSRs.aspx.designer.cs">
+      <DependentUpon>CablePendingSRs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\ServiceRequestsList.aspx.cs">
+      <DependentUpon>ServiceRequestsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\ServiceRequestsList.aspx.designer.cs">
+      <DependentUpon>ServiceRequestsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\Rep_ViewServiceRequests.aspx.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\Rep_ViewServiceRequests.aspx.designer.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\TDirectSupportMenu.ascx.cs">
+      <DependentUpon>TDirectSupportMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\TDirectSupportMenu.ascx.designer.cs">
+      <DependentUpon>TDirectSupportMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\TechDirectSupport.Master.cs">
+      <DependentUpon>TechDirectSupport.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\TechDirectSupport.Master.designer.cs">
+      <DependentUpon>TechDirectSupport.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\UpdatePendingSRDirect.aspx.cs">
+      <DependentUpon>UpdatePendingSRDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\DirectSupport\UpdatePendingSRDirect.aspx.designer.cs">
+      <DependentUpon>UpdatePendingSRDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\CableSRReport.aspx.cs">
+      <DependentUpon>CableSRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\CableSRReport.aspx.designer.cs">
+      <DependentUpon>CableSRReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ClientSearchView.aspx.cs">
+      <DependentUpon>ClientSearchView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ClientSearchView.aspx.designer.cs">
+      <DependentUpon>ClientSearchView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\RaiseCableUserSR.aspx.cs">
+      <DependentUpon>RaiseCableUserSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\RaiseCableUserSR.aspx.designer.cs">
+      <DependentUpon>RaiseCableUserSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ServiceRequestDetail.aspx.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ServiceRequestDetail.aspx.designer.cs">
+      <DependentUpon>ServiceRequestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ServiceRequestSearch.aspx.cs">
+      <DependentUpon>ServiceRequestSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\ServiceRequestSearch.aspx.designer.cs">
+      <DependentUpon>ServiceRequestSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\HelpDesk.Master.cs">
+      <DependentUpon>HelpDesk.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\HelpDesk.Master.designer.cs">
+      <DependentUpon>HelpDesk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\HelpDeskMenu.ascx.cs">
+      <DependentUpon>HelpDeskMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\HelpDeskMenu.ascx.designer.cs">
+      <DependentUpon>HelpDeskMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\PendingSRConfirmation.aspx.cs">
+      <DependentUpon>PendingSRConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\PendingSRConfirmation.aspx.designer.cs">
+      <DependentUpon>PendingSRConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\RaiseBroadbandSR.aspx.cs">
+      <DependentUpon>RaiseBroadbandSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\RaiseBroadbandSR.aspx.designer.cs">
+      <DependentUpon>RaiseBroadbandSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\Rep_ViewServiceRequests.aspx.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\Rep_ViewServiceRequests.aspx.designer.cs">
+      <DependentUpon>Rep_ViewServiceRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\SMS_SRDetails.aspx.cs">
+      <DependentUpon>SMS_SRDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\SMS_SRDetails.aspx.designer.cs">
+      <DependentUpon>SMS_SRDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\UpdatePendingSR.aspx.cs">
+      <DependentUpon>UpdatePendingSR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalSupport\HelpDesk\UpdatePendingSR.aspx.designer.cs">
+      <DependentUpon>UpdatePendingSR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClientSearchView.ascx.cs">
+      <DependentUpon>ClientSearchView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClientSearchView.ascx.designer.cs">
+      <DependentUpon>ClientSearchView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoggedActivity.ascx.cs">
+      <DependentUpon>LoggedActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoggedActivity.ascx.designer.cs">
+      <DependentUpon>LoggedActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoggedActivityPaperless.ascx.cs">
+      <DependentUpon>LoggedActivityPaperless.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoggedActivityPaperless.ascx.designer.cs">
+      <DependentUpon>LoggedActivityPaperless.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SitePath.ascx.cs">
+      <DependentUpon>SitePath.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SitePath.ascx.designer.cs">
+      <DependentUpon>SitePath.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UploadPhoto.ascx.cs">
+      <DependentUpon>UploadPhoto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadPhoto.ascx.designer.cs">
+      <DependentUpon>UploadPhoto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PackageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UserManageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\InetBill.css" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillingMaster.Master" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillRaised.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillToBeRaised.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BroadBandSubscriberLedgerView.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ConfirmConnection.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\Default.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\PostArrears.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\PostWaivers.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberBill.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewSubscriberFirstBill.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Error.aspx" />
+    <Content Include="Images\Pictures\networking.jpg" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ConnectionShifting.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\CyclePayment.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\SideMenu.ascx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\TemporaryDisconnection.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\UpdateSubscriberDetails.aspx" />
+    <Content Include="UI\NetworkManagement\BroadbandUsers.aspx" />
+    <Content Include="UI\NetworkManagement\ConnectUser.aspx" />
+    <Content Include="UI\NetworkManagement\Default.aspx" />
+    <Content Include="UI\NetworkManagement\NetworkManagement.Master" />
+    <Content Include="UI\NetworkManagement\PendingConnections.aspx" />
+    <Content Include="UI\NetworkManagement\PointOfPresence.aspx" />
+    <Content Include="UI\NetworkManagement\PointOfPresenceEdit.aspx" />
+    <Content Include="UI\NetworkManagement\PointOfPresenceView.aspx" />
+    <Content Include="UI\NetworkManagement\Rep_ViewServiceRequests.aspx" />
+    <Content Include="UI\NetworkManagement\ServiceRequestDetail.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\CustomerCare.Master" />
+    <Content Include="UI\MarketingAndSales\SalesExecutive\Default.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesExecutive\RegisteredConnections.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesExecutive\salesAgentMenu.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\MarketingAndSales\SalesExecutive\SalesAgent.Master" />
+    <Content Include="UI\MarketingAndSales\SalesHead\AgentEdit.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\AgentRegistration.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\AgentsView.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\Default.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ViewRegisteredConnections.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\SalesHeadMenu.ascx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\UserRegistration.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Pictures\customerCare.jpg" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\Default.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\SalesHead.Master" />
+    <Content Include="UI\SystemManagement\DOB.ascx" />
+    <Content Include="UI\SystemManagement\PopUpUserDetails.aspx" />
+    <Content Include="UI\SystemManagement\RegisterSysUser.aspx" />
+    <Content Include="UI\SystemManagement\SysUsersManage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\SystemManagement\SystemManage.Master" />
+    <Content Include="UI\TechnicalSupport\Controls\ActionHistory.ascx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\Default.aspx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\Rep_ViewServiceRequests.aspx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\TDirectSupportMenu.ascx" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\TechDirectSupport.Master" />
+    <Content Include="UI\TechnicalSupport\DirectSupport\UpdatePendingSRDirect.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\Default.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\HelpDesk.Master" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\HelpDeskMenu.ascx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\PendingSRConfirmation.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\RaiseBroadbandSR.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\Rep_ViewServiceRequests.aspx" />
+    <Content Include="UserControl\SitePath.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Buttons\activate.png" />
+    <Content Include="Images\Buttons\Add POP.jpg" />
+    <Content Include="Images\Buttons\back.png" />
+    <Content Include="Images\Buttons\cancel.jpg" />
+    <Content Include="Images\Buttons\Change Password .jpg" />
+    <Content Include="Images\Buttons\Check Duplicate Entry.jpg" />
+    <Content Include="Images\Buttons\connect.jpg" />
+    <Content Include="Images\Buttons\Create System User.jpg" />
+    <Content Include="Images\Buttons\deactivate.png" />
+    <Content Include="Images\Buttons\Delete .jpg" />
+    <Content Include="Images\Buttons\delete.png" />
+    <Content Include="Images\Buttons\Disconnect .jpg" />
+    <Content Include="Images\Buttons\dots.gif" />
+    <Content Include="Images\Buttons\edit.png" />
+    <Content Include="Images\Buttons\Get Current Address .jpg" />
+    <Content Include="Images\Buttons\Get Details.jpg" />
+    <Content Include="Images\Buttons\Get User Detail.jpg" />
+    <Content Include="Images\Buttons\GetBill Cycle.jpg" />
+    <Content Include="Images\Buttons\Go.jpg" />
+    <Content Include="Images\Buttons\Load User.jpg" />
+    <Content Include="Images\Buttons\Login.jpg" />
+    <Content Include="Images\Buttons\Post Arrear.jpg" />
+    <Content Include="Images\Buttons\Post Payment.jpg" />
+    <Content Include="Images\Buttons\Post Waivers.jpg" />
+    <Content Include="Images\Buttons\Reactivate.jpg" />
+    <Content Include="Images\Buttons\Refresh.jpg" />
+    <Content Include="Images\Buttons\Register service request.jpg" />
+    <Content Include="Images\Buttons\Register User.jpg" />
+    <Content Include="Images\Buttons\Register.jpg" />
+    <Content Include="Images\Buttons\search.jpg" />
+    <Content Include="Images\Buttons\Select.jpg" />
+    <Content Include="Images\Buttons\Show Report.jpg" />
+    <Content Include="Images\Buttons\Submit Bill.jpg" />
+    <Content Include="Images\Buttons\Submit.jpg" />
+    <Content Include="Images\Buttons\Update Address.jpg" />
+    <Content Include="Images\Buttons\Update POP.jpg" />
+    <Content Include="Images\Buttons\update.jpg" />
+    <Content Include="Images\Buttons\View History.jpg" />
+    <Content Include="Images\Buttons\View.jpg" />
+    <Content Include="Images\Logo\logo-a.bmp" />
+    <Content Include="Images\Logo\logo-b.bmp" />
+    <Content Include="Images\Logo\logo-c.bmp" />
+    <Content Include="Images\Logo\logo-footer.jpg" />
+    <Content Include="Images\Logo\Logo.gif" />
+    <Content Include="Images\Logo\Logo.jpg" />
+    <Content Include="Images\Pictures\bottomBg.gif" />
+    <Content Include="Images\Pictures\down.gif" />
+    <Content Include="Images\Pictures\footer-bg.jpg" />
+    <Content Include="Images\Pictures\grid-header.png" />
+    <Content Include="Images\Buttons\view.png" />
+    <Content Include="Images\Pictures\hor-bg.gif" />
+    <Content Include="Images\Pictures\LoginImg_01.jpg" />
+    <Content Include="Images\Pictures\LoginImg_02.jpg" />
+    <Content Include="Images\Pictures\LoginImg_03.jpg" />
+    <Content Include="Images\Pictures\LoginImg_04.jpg" />
+    <Content Include="Images\Pictures\LoginImg_05.jpg" />
+    <Content Include="Images\Pictures\LoginImg_06.jpg" />
+    <Content Include="Images\Pictures\LoginImg_07.jpg" />
+    <Content Include="Images\Pictures\LoginImg_08.jpg" />
+    <Content Include="Images\Pictures\LoginImg_09.jpg" />
+    <Content Include="Images\Pictures\LoginImg_10.jpg" />
+    <Content Include="Images\Pictures\marketing&amp;sales.jpg" />
+    <Content Include="Images\Pictures\SystemsManagement.jpg" />
+    <Content Include="Images\Pictures\technical_support.jpg" />
+    <Content Include="Scripts\PopUp.js" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ArrearWaiverHistory.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\CollectionReport.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\SubscriberBillDisplay.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\SubscriberInfoDetails.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewUserSessionDetails.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\BroadbandSubscriberLedger.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\CollectionReport.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\ExDataTransferPayment.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\Images\ReActivate.png" />
+    <Content Include="UI\BillingAndCustomerCare\Menu\arrow-down.gif" />
+    <Content Include="UI\BillingAndCustomerCare\Menu\arrow-right.gif" />
+    <Content Include="UI\BillingAndCustomerCare\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\BillingAndCustomerCare\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\MarketingAndSales\Menu\arrow-down.gif" />
+    <Content Include="UI\MarketingAndSales\Menu\arrow-right.gif" />
+    <Content Include="UI\MarketingAndSales\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\MarketingAndSales\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\MarketingAndSales\SalesExecutive\AddConnectionReference.aspx" />
+    <Content Include="UI\NetworkManagement\Menu.ascx" />
+    <Content Include="UI\NetworkManagement\RegisteredUserInfoDetails.aspx" />
+    <Content Include="UI\NetworkManagement\ViewBroadbandUserInfo.aspx" />
+    <Content Include="UI\SystemManagement\Menu\arrow-down.gif" />
+    <Content Include="UI\SystemManagement\Menu\arrow-right.gif" />
+    <Content Include="UI\SystemManagement\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\SystemManagement\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\UpdatePendingSR.aspx" />
+    <Content Include="UI\TechnicalSupport\Menu\arrow-down.gif" />
+    <Content Include="UI\TechnicalSupport\Menu\arrow-right.gif" />
+    <Content Include="UI\TechnicalSupport\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\TechnicalSupport\Menu\ddlevelsmenu.js" />
+    <Content Include="UserControl\UploadPhoto.ascx" />
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Reports\FIRSTBILL-GST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FIRSTBILL-GST.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\FIRSTBILL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FIRSTBILL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\NOTFIRSTBILL-GST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NOTFIRSTBILL-GST.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\NOTFIRSTBILL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NOTFIRSTBILL.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CodeFile\ISubscribers.asmx" />
+    <Content Include="UI\NetworkImplementation\Default.aspx" />
+    <Content Include="UI\NetworkImplementation\Menu\arrow-down.gif" />
+    <Content Include="UI\NetworkImplementation\Menu\arrow-right.gif" />
+    <Content Include="UI\NetworkImplementation\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\NetworkImplementation\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\NetworkImplementation\NwImplementation.Master" />
+    <Content Include="UI\NetworkImplementation\NwImpMenu.ascx" />
+    <Content Include="UI\NetworkImplementation\Reg_UserConnectivityDetails.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\accordion.css" />
+    <Content Include="Images\Buttons\Add_link.jpg" />
+    <Content Include="Images\Buttons\Add_link_details.jpg" />
+    <Content Include="Images\Buttons\arrow-left.gif" />
+    <Content Include="Images\Buttons\arrow-right.gif" />
+    <Content Include="Images\Buttons\Mail2.png" />
+    <Content Include="Images\Buttons\SMS_01.png" />
+    <Content Include="Images\Buttons\SMS_02.png" />
+    <Content Include="Images\Buttons\Updateservicerequest.jpg" />
+    <Content Include="Images\Pictures\management.jpg" />
+    <Content Include="Images\Pictures\networkimplementation.jpg" />
+    <Content Include="Images\Pictures\spacer.gif" />
+    <Content Include="menuwithicons\billmenu.html" />
+    <Content Include="menuwithicons\css\layout.css" />
+    <Content Include="menuwithicons\css\menu.css" />
+    <Content Include="menuwithicons\index.html" />
+    <Content Include="Scripts\acc_script.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillPlanChange.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\BillPaymentDarkFiber.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\CSVFileUpload.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\DisconnectedUsersView.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\DisconnectionActivate.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewDataUsageDetails.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewDTTFUploadDetails.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\Billing\ViewDTUsageBreakUp.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\ChangePassword.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\PermanentDisconnection.aspx" />
+    <Content Include="UI\BillingAndCustomerCare\CustomerCare\UploadSubscriberFiles.aspx" />
+    <Content Include="UI\ChangePassword.aspx" />
+    <Content Include="UI\Management\AmountCollected.aspx" />
+    <Content Include="UI\Management\BillCollectionSummary.aspx" />
+    <Content Include="UI\Management\ConnectionReports.aspx" />
+    <Content Include="UI\Management\Default.aspx" />
+    <Content Include="UI\Management\Management.Master" />
+    <Content Include="UI\Management\Menu\arrow-down.gif" />
+    <Content Include="UI\Management\Menu\arrow-right.gif" />
+    <Content Include="UI\Management\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\Management\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\Management\MgmtMenu.ascx" />
+    <Content Include="UI\Management\MonthRegDisplay.aspx" />
+    <Content Include="UI\Management\PaymentCollectionReport.aspx" />
+    <Content Include="UI\Management\RegistrationReport.aspx" />
+    <Content Include="UI\MarketingAndSales\ChangePassword.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesExecutive\EditRegistration.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\ConnectionReports.aspx" />
+    <Content Include="UI\NetworkManagement\AddLinkDF.aspx" />
+    <Content Include="UI\NetworkManagement\DarkFiberConnections.aspx" />
+    <Content Include="UI\SystemManagement\DarkFiberUserRegister.aspx" />
+    <Content Include="UI\MarketingAndSales\SalesHead\EditRegistration.aspx" />
+    <Content Include="UI\NetworkImplementation\DailyFiberMaintenance.aspx" />
+    <Content Include="UI\NetworkImplementation\DailyPopMaintenance.aspx" />
+    <Content Include="UI\NetworkManagement\Control\Menu\arrow-down.gif" />
+    <Content Include="UI\NetworkManagement\Control\Menu\arrow-right.gif" />
+    <Content Include="UI\NetworkManagement\Control\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\NetworkManagement\Control\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\NetworkManagement\FiberMaintenanceReport.aspx" />
+    <Content Include="UI\NetworkManagement\Menu\arrow-down.gif" />
+    <Content Include="UI\NetworkManagement\Menu\arrow-right.gif" />
+    <Content Include="UI\NetworkManagement\Menu\ddlevelsmenu-base.css" />
+    <Content Include="UI\NetworkManagement\Menu\ddlevelsmenu.js" />
+    <Content Include="UI\NetworkManagement\PopMaintenanceReport.aspx" />
+    <Content Include="UI\SystemManagement\Default.aspx" />
+    <Content Include="UI\SystemManagement\SystemSideMenu.ascx" />
+    <Content Include="UI\TechnicalSupport\ChangePassword.aspx" />
+    <Content Include="UI\TechnicalSupport\HelpDesk\SMS_SRDetails.aspx" />
+    <Content Include="UserControl\LoggedActivity.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSVFolder\" />
+    <Folder Include="UploadedImages\AddressProof\" />
+    <Folder Include="UploadedImages\DisconnectForm\" />
+    <Folder Include="UploadedImages\IDProof\" />
+    <Folder Include="UploadedImages\Subscribers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\desktop.ini" />
+    <Content Include="App_Data\id-proof and address proof.xlsx" />
+    <Content Include="bin\desktop.ini" />
+    <Content Include="CSS\desktop.ini" />
+    <Content Include="Developer\desktop.ini" />
+    <Content Include="obj\Debug\Apple_Bss.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Apple_Bss.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Apple_Bss.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\Apple_Bss.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\desktop.ini" />
+    <Content Include="obj\Debug\Refactor\desktop.ini" />
+    <Content Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\TempPE\desktop.ini" />
+    <Content Include="obj\desktop.ini" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Stylesheet2020\css\icons\icomoon\fonts\icomoon.eot" />
+    <Content Include="Stylesheet2020\css\icons\icomoon\fonts\icomoon.ttf" />
+    <Content Include="Stylesheet2020\css\icons\icomoon\fonts\icomoon.woff" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\FORMATTING.md" />
+    <Content Include="Stylesheet2020\js\plugins\pickers\pickadate\translations\NAMING.md" />
+    <Content Include="UI\MarketingAndSales\SalesHead\SalesMaster.Master" />
+    <Content Include="UploadedFiles\AddressProof\CAF004_AddressProof20160810021013.pdf" />
+    <Content Include="UploadedFiles\AddressProof\CAF007_AddressProof20160810020553.pdf" />
+    <Content Include="UploadedFiles\desktop.ini" />
+    <Content Include="UploadedFiles\DisconnectForm\desktop.ini" />
+    <Content Include="UploadedFiles\Documents\CAF004_CAFAnnexureDocument20160810021013.pdf" />
+    <Content Include="UploadedFiles\Documents\CAF004_CAFDocument20160810021013.pdf" />
+    <Content Include="UploadedFiles\Documents\CAF007_CAFDocument20160810020553.pdf" />
+    <Content Include="UploadedFiles\IDProof\CAF004_IDProof20160810021013.pdf" />
+    <Content Include="UploadedFiles\IDProof\CAF007_IDProof20160810020553.pdf" />
+    <Content Include="UploadedFiles\JMCReports\desktop.ini" />
+    <Content Include="UploadedFiles\OTDRReports\desktop.ini" />
+    <None Include="Web References\PackageService\PackageManagementService.wsdl" />
+    <Content Include="Web References\PackageService\PackageObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\PackageService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\UserManageService\AccountSummaryObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\AuthLogObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\InvoiceObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\LiveUserObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\Map.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\UserManageService\ResourceObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\StatusObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UserManageService\UsageDetailObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\UserManageService\UserManagementService.wsdl" />
+    <Content Include="Web References\UserManageService\UserObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://223.27.120.2:10080/24online/services/PackageManagementService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PackageService\</RelPath>
+      <UpdateFromURL>http://223.27.120.2:10080/24online/services/PackageManagementService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Apple_Bss_PackageService_PackageManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://223.27.120.2:10080/24online/services/UserManagementService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UserManageService\</RelPath>
+      <UpdateFromURL>http://223.27.120.2:10080/24online/services/UserManagementService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Apple_Bss_UserManageService_UserManagementService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2790</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

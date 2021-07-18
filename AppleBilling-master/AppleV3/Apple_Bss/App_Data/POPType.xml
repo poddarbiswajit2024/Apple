@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <PopType>
+   
+    <Type value="POP(CAT5/CAT6)"></Type>
+    <Type value="OFC"></Type>
+    <Type value="ADSL2+"></Type>
+    <Type value="WIRELESS"></Type>
+    <Type value="FTTB(GEPON)"></Type>
+    <Type value="FTTH(Active MC)"></Type>
+    <Type value="FTTH(GEPON)"></Type>
+    <Type value="EOC"></Type>
+  </PopType>
+</root>

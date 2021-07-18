@@ -1,0 +1,12 @@
+﻿Bill Plan change immediate notes
+
+
+-New bill plan check will come into affect immediately 
+
+-security deposit difference
+
+-tariff plan difference
+
+-new bill raised then or next month? ..better next month.
+
+-can calculate and present to billing user for record purpose
